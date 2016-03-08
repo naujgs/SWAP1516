@@ -1,0 +1,10 @@
+﻿VMWare
+http://artescritorio.com/como-instalar-vmware-player-en-debian-y-derivados-31330/
+
+Todo lo que entreguemos, al github, se recomiendo hacerlo en texto plano. No en pdf.
+
+Trabajaremos, en total, con 3 maquinas virtuales. Deben verse las tres entre si y desde la maquina anfitriona, también estaría bien que existiera comunicación. Haremos ping y conexión ssh.
+Para la practica 2 debemos traer dos maquinas listas. La maquina 2 sera el balanceador.
+
+
+

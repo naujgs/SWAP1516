@@ -1,0 +1,18 @@
+<pregunta>
+  <enunciado>¿Como conseguir que tu sistema tengo una alta disponibilidad?</enunciado>
+  <opcionA>Teniendo los sistemas encendidos todo el dia. No hace falta nada mas.</opcionA>
+  <opcionB>Centrandonos unica y exclusivamente en la "Disponibilidad de aplicación"</opcionB>
+  <opcionC>La disponibilidad de tu sistema no es importante. Con una disponibilidad media esta bien.</opcionC>
+  <opcionD>Usando subsistemas redundantes y teniendolos monitorizados</opcionD>
+  <solucion>D</solucion>
+</pregunta>
+
+
+<pregunta>
+  <enunciado>En un sistema escalable, cuando realizamos una ampliacion de equipos en el servicio web. ¿Debemos tener en cuenta el resto de servidores que dan otros servicios?</enunciado>
+  <opcionA>Depende de si tenemos un balanceador de caraga o un switch.</opcionA>
+  <opcionB>Si, porque pueden llegar a saturarse ante el incremento de equipos que le enviaran peticiones de información.</opcionB>
+  <opcionC>Si, porque puede que no cojan todos en nuestra granja web y tengamos que quitar algunos equipos que ofrecen otros servicios para ganar espacio.</opcionC>
+  <opcionD>No. Es completamente indiferente.</opcionD>
+  <solucion>B</solucion>
+</pregunta>

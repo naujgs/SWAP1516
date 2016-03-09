@@ -1,0 +1,18 @@
+<pregunta>
+  <enunciado>Una granja web es:</enunciado>
+  <opcionA>Sitio donde se producen webs</opcionA>
+  <opcionB>Un unico servidor que sirve contenido web</opcionB>
+  <opcionC>Un conjunto de servidores dedicados a servir contenido web a los usuarios finales.</opcionC>
+  <opcionD>Ninguna de las opciones son correctas</opcionD>
+  <solucion>C</solucion>
+</pregunta
+
+
+<pregunta>
+  <enunciado>Cual de las siguientes es una caracteristica de un sitio web de exito</enunciado>
+  <opcionA>Un fallo en una sola maquina, no afectara al conjunto de la granja web</opcionA>
+  <opcionB>Configurar las maquinas para que el servicio web lo ofrezca una unica maquina y asi con el resto de servicios.</opcionB>
+  <opcionC>Realizar cualquier tipo de actualizacion en los equipos de "Produccion"</opcionC>
+  <opcionD>Al principio es muy barato, aunque a la larga sale muy caro</opcionD>
+  <solucion>A</solucion>
+</pregunta

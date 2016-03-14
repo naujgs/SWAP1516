@@ -3,7 +3,7 @@
 ***Practica realizada por Juan González Serrano, para la asignatura de Servidores Webs de Áltas Prestaciones***
 ***
 ##Ejercicio 1
-####Configuración de ssh para acceder sin que solicite contraseña
+###Configuración de ssh para acceder sin que solicite contraseña
 
 En este ejercicio lo que vamos hacer es crear un par de claves *publica/privada*.
 E intercambiaremos las claves publicas entre ambos, utilizando la herramienta **rsync**.
@@ -42,7 +42,7 @@ En la imagen de abajo vemos como al realizar una conexion ssh ya no nos pide ide
 ![img](https://github.com/naujgs/SWAP1516/blob/master/Practica2/img/ssh_conexion_conClave.jpg)
 ***
 ##Ejercicio 2
-####Probar el funcionamiento de la copia de archivos por ssh
+###Probar el funcionamiento de la copia de archivos por ssh
 
 En el caso que necesitemos crear un tar.gz de un equipo y dejarlo en otro pero no
 disponemos de espacio en disco local, podemos usar ssh para crearlo directamente
@@ -72,4 +72,4 @@ ha creado el fichero comprimido.
 ![img](https://github.com/naujgs/SWAP1516/blob/master/Practica2/img/compresion_remoto_despues.jpg)
 ***
 ##Ejercicio 3
-####Clonado de una carpeta entre las dos maquinas
+###Clonado de una carpeta entre las dos maquinas

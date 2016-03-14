@@ -29,6 +29,8 @@ Esta herramienta sera la que utilicemos para enviar la clave publica del equipo 
 Para ello ejecutaremos el comando **sudo apt-get install rsync**.
 Como podemos ver en la imagen inferior, yo ya lo tengo instalada en ambas maquinas.
 
+![imagen](https://github.com/naujgs/SWAP1516/blob/master/Practica2/img/instal_rsync.jpg)
+
 Sera el fichero *~/.ssh/id_dsa.pub* el que tendremos que copiar en el otro equipo
 (maquina 2). Para ello nos conectaremos al equipo dos atraves de ssh, y le
 enviaremos nuestra clave pública.

@@ -38,3 +38,6 @@ de tener algun problema tendremos que irnos al directorio **/etc/ssh/sshd_config
 ,poner el parametro **PermitRootLogin** a **yes** y reiniciar el servicio **service ssh restart**.
 
 ![imagen](https://github.com/naujgs/SWAP1516/blob/master/Practica2/img/ssh_permisosRoot.jpg)
+
+A continuacion vemos como establecemos la conexion entre el equipo 1 y el 2.
+![imagen](https://github.com/naujgs/SWAP1516/blob/master/Practica2/img/ssh_conexion.jpg)

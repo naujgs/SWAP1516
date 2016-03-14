@@ -22,4 +22,17 @@ Finalmente nos genera dos ficheros:
 
 ![imagen](https://github.com/naujgs/SWAP1516/blob/master/Practica2/img/keygen_ssh_equi1.jpg)
 
-Sera el fichero *~/.ssh/id_dsa.pub* el que tendremos que copiar en el otro fichero
+Sera el fichero *~/.ssh/id_dsa.pub* el que tendremos que copiar en el otro equipo
+(maquina 2). Para ello nos conectaremos al equipo dos atraves de ssh, y le
+enviaremos nuestra clave pública.
+Ahora nos pedira que nos identifiquemos, pero al finalizar este ejercicio veremos
+que esto dejara de ser asi.
+
+Para conectarnos atraves de ssh, ejecutaremos el comando *ifconfig* y veremos cual
+es la ip de nuestro equipo. En mi caso son:
+* *Equipo 1* 172.16.91.128
+* *Equipo 2* 172.16.91.129
+
+Por lo que en la maquina 1 ejecutare el comando **ssh root@172.16.91.129**. En caso
+de tener algun problema tendremos que irnos al directorio **/etc/ssh/sshd_config**
+y poner el parametro **PermitRootLogin** a **yes**

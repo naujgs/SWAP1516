@@ -35,7 +35,7 @@ Para ver la ip de nuestros equipos, ejecutaremos el comando *ifconfig*.En mi cas
 
 En la siguiente imagen podemos ver la ejecucion de la orden en ambos equipo.
 
-![img]()
+![img](https://github.com/naujgs/SWAP1516/blob/master/Practica2/img/ssh_envio_clave_publica.jpg)
 
 Sera el fichero *~/.ssh/id_dsa.pub* el que tendremos que copiar en el otro equipo
 (maquina 2). Para ello nos conectaremos al equipo dos atraves de ssh, y le

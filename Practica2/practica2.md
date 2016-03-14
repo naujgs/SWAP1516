@@ -17,5 +17,9 @@ Luego nos preguntara por una clave. Dicha clave sera solicitada siempre que dese
 utilizar el par de claves. En mi caso lo dejo en blanco, por lo que no me solicitara
 ninguna clave.
 Finalmente nos genera dos ficheros:
-* ~/.ssh/id_dsa: Para la clave privada
-* ~/.ssh/id_dsa.pub: Para la clave publica.
+* **~/.ssh/id_dsa**: Para la clave privada
+* **~/.ssh/id_dsa.pub**: Para la clave publica.
+
+**(Ver [Figura 1]())**
+
+Sera el fichero *~/.ssh/id_dsa.pub* el que tendremos que copiar en el otro fichero

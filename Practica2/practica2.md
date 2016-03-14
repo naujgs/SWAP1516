@@ -42,7 +42,6 @@ En la imagen de abajo vemos como al realizar una conexion ssh ya no nos pide ide
 
 ![img](https://github.com/naujgs/SWAP1516/blob/master/Practica2/img/ssh_conexion_conClave.jpg)
 
-Como podemos ver en la imagen, nos da error de identificion. Por lo que debemos ir al fichero **/etc/ssh/sshd_config**
-de cada equipo y cambiar el parametro **PermitRootLogin** a **yes** y reiniciar el servicio **service ssh restart**.
+##Ejercicio 2
 
-![imagen](https://github.com/naujgs/SWAP1516/blob/master/Practica2/img/ssh_permisosRoot.jpg)
+**Probar el funcionamiento de la copia de archivos por ssh**

@@ -26,7 +26,7 @@ Realizamos el mismo proceso en el equipo 2.
 
 Una vez hemos creado el par de claves, lo que haremos sera copiar nuestra clave
 publica en el equipo remoto. De esta forma, no sera necesario volver a identificarse
-cuando vayamos a realizar una conexion ssh. Para ello ejecutaremos el comando **ssh-copy-id <usuario>@<IP_remota>**
+cuando vayamos a realizar una conexion ssh. Para ello ejecutaremos el comando **ssh-copy-id usuario@IP_remota**
 Esta orden la ejecutaremos en ambos equipos.
 
 

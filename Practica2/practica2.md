@@ -35,4 +35,4 @@ es la ip de nuestro equipo. En mi caso son:
 
 Por lo que en la maquina 1 ejecutare el comando **ssh root@172.16.91.129**. En caso
 de tener algun problema tendremos que irnos al directorio **/etc/ssh/sshd_config**
-,poner el parametro **PermitRootLogin** a **yes** y reiniciar el servicio **service ssh restart**
+,poner el parametro **PermitRootLogin** a **yes** y reiniciar el servicio *service ssh restart*

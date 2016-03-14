@@ -42,7 +42,6 @@ En la imagen de abajo vemos como al realizar una conexion ssh ya no nos pide ide
 
 ![img](https://github.com/naujgs/SWAP1516/blob/master/Practica2/img/ssh_conexion_conClave.jpg)
 ***
-|:---:|
 ##Ejercicio 2
 
 **Probar el funcionamiento de la copia de archivos por ssh**

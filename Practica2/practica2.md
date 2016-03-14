@@ -20,6 +20,6 @@ Finalmente nos genera dos ficheros:
 * **~/.ssh/id_dsa**: Para la clave privada
 * **~/.ssh/id_dsa.pub**: Para la clave publica.
 
-**(Ver [Figura 1]())**
+**(Ver [Figura 1]())** // Keygen_ssh_equi1
 
 Sera el fichero *~/.ssh/id_dsa.pub* el que tendremos que copiar en el otro fichero

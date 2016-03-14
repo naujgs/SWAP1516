@@ -24,4 +24,4 @@ Finalmente nos genera dos ficheros:
 
 Sera el fichero *~/.ssh/id_dsa.pub* el que tendremos que copiar en el otro fichero
 
-![imagen](https://github.com/naujgs/SWAP1516/blob/master/Practica2/img/keygen_ssh_equi1.jpg)
+![imagen][Figura 1](https://github.com/naujgs/SWAP1516/blob/master/Practica2/img/keygen_ssh_equi1.jpg)

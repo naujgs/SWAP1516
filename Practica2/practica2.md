@@ -73,3 +73,8 @@ ha creado el fichero comprimido.
 ***
 ##Ejercicio 3
 ###Clonado de una carpeta entre las dos maquinas
+
+Para la realización de este ejercicio utilizaremos la herramienta **rsync**. Asi que procederemos
+a su instalacion. Para ello, primero haremos un **update** y un **upgrade** de nuestro sistema. Y
+luego ejecutaremos la orden **sudo apt-get install rsync**. Yo en mi caso ya la tengo
+instalada en ambas maquinas.

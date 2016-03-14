@@ -79,8 +79,16 @@ a su instalacion. Para ello, primero haremos un **update** y un **upgrade** de n
 luego ejecutaremos la orden **sudo apt-get install rsync**. Yo en mi caso ya la tengo
 instalada en ambas maquinas. Por lo que procedere directamente a su ejecucion.
 
+La sintaxis del comando que ejecutaremos sera:
+
+**rsync -avz -e ssh \<equipoDestino\> \<dir_clonar\> \<dir_remoto\>**
+
 En este ejercicio creare un directorio en la maquina 2 y lo clonare en la maquina 1. Dicho
 directorio contendra un fichero de texto y una copia del fichero de configuracion del
 servicio apache.
 
 ![img](https://github.com/naujgs/SWAP1516/blob/master/Practica2/img/clonar_contenido_dir.jpg)
+
+Una vez tenemos nuestro directorio ejecutamos nuestra orden. En la imagen inferior podemos
+ver como en la maquina 1 (derecha) en un principio no tenemos el directorio. Y tras ejecuta
+el comando en la maquina 2 (izquierda) si que tenemos el directorio clonado

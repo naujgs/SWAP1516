@@ -94,5 +94,8 @@ y ejecutamos la orden. Tras la cual copiara el contenido del directorio, que est
 equipo 2.
 
 ![img](https://github.com/naujgs/SWAP1516/blob/master/Practica2/img/clonado_ok.jpg)
+
+En la imagen podemos ver el contenido del directorio antes y despues de ser clonado.
+
 **
 ##Ejercicio 4

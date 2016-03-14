@@ -65,6 +65,6 @@ Una vez tenemos nuestro directorio ejecutamos nuestra orden. Para ello nos vamos
 ![img](https://github.com/naujgs/SWAP1516/blob/master/Practica2/img/clonado_ok.jpg)
 
 En la imagen podemos ver el contenido del directorio antes y despues de ser clonado.
-**
+***
 ##Ejercicio 4
 ###Establecer una tarea en cron que se ejecute cada hora para mantener actualizado el contenido del directorio /var/www entre las dos máquinas

@@ -37,4 +37,4 @@ Por lo que en la maquina 1 ejecutare el comando **ssh root@172.16.91.129**. En c
 de tener algun problema tendremos que irnos al directorio **/etc/ssh/sshd_config**
 ,poner el parametro **PermitRootLogin** a **yes** y reiniciar el servicio **service ssh restart**.
 
-![imagen]()
+![imagen](https://github.com/naujgs/SWAP1516/blob/master/Practica2/img/ssh_permisosRoot.jpg)

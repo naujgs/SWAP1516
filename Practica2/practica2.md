@@ -7,8 +7,8 @@ Practica realizada por Juan González Serrano, para la asignatura de Servidores 
 **Configuración de ssh para acceder sin que solicite contraseña**
 
 En este ejercicio lo que vamos hacer es crear un par de claves *publica/privada*.
-Primero en el equipo 1 y luego en el equipo 2. De forma que podamos acceder del uno
-al otro mediante *ssh* sin necesidad de autentificarnos en cada intento.
+E intercambiaremos las claves publicas entre ambos, utilizando la herramienta **rsync**.
+De forma que podamos acceder del uno al otro mediante *ssh* sin necesidad de autentificarnos en cada intento.
 
 Nos vamos a la maquina 1 y en ella ejecutaremos el comando ***ssh-keygen -t dsa***
 Nos preguntara por la ubicacion donde deseamos que guarde los ficheros. En mi
@@ -30,6 +30,8 @@ Para ello ejecutaremos el comando **sudo apt-get install rsync**.
 Como podemos ver en la imagen inferior, yo ya lo tengo instalada en ambas maquinas.
 
 ![imagen](https://github.com/naujgs/SWAP1516/blob/master/Practica2/img/instal_rsync.jpg)
+
+Llegados a este punto
 
 Sera el fichero *~/.ssh/id_dsa.pub* el que tendremos que copiar en el otro equipo
 (maquina 2). Para ello nos conectaremos al equipo dos atraves de ssh, y le

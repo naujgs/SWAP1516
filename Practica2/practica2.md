@@ -1,4 +1,3 @@
----
 #Practica 2
 ***
 Practica realizada por Juan González Serrano, para la asignatura de Servidores Webs de Áltas Prestaciones
@@ -34,7 +33,9 @@ Para ver la ip de nuestros equipos, ejecutaremos el comando *ifconfig*.En mi cas
 * *Equipo 1* 172.16.91.128
 * *Equipo 2* 172.16.91.129
 
+En la siguiente imagen podemos ver la ejecucion de la orden en ambos equipo.
 
+![img]()
 
 Sera el fichero *~/.ssh/id_dsa.pub* el que tendremos que copiar en el otro equipo
 (maquina 2). Para ello nos conectaremos al equipo dos atraves de ssh, y le

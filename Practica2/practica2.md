@@ -24,14 +24,10 @@ Finalmente nos genera dos ficheros:
 
 Realizamos el mismo proceso en el equipo 2.
 
-Ahora lo que haremos sera instalar la herramiento **rsync** en los dos equipos.
-Esta herramienta sera la que utilicemos para enviar la clave publica del equipo 1 al equipo 2 y viceversa.
-Para ello ejecutaremos el comando **sudo apt-get install rsync**.
-Como podemos ver en la imagen inferior, yo ya lo tengo instalada en ambas maquinas.
+Una vez hemos creado el par de claves, lo que haremos sera copiar nuestra clave
+publica en el equipo remoto. De esta forma, no sera necesario volver a identificarse
+cuando vayamos a realizar una conexion ssh. Para ello ejecutaremos el comando **ssh-copy-id <usuario>@<IP_remota>**
 
-![imagen](https://github.com/naujgs/SWAP1516/blob/master/Practica2/img/instal_rsync.jpg)
-
-Llegados a este punto
 
 Sera el fichero *~/.ssh/id_dsa.pub* el que tendremos que copiar en el otro equipo
 (maquina 2). Para ello nos conectaremos al equipo dos atraves de ssh, y le

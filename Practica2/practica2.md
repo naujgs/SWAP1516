@@ -1,7 +1,7 @@
 #Practica 2
 
 Practica realizada por Juan González Serrano, para la asignatura de Servidores Webs de Áltas Prestaciones
-
+---------------------------------------------------------------------------------------------------------
 ##Ejercicio 1
 
 **Configuración de ssh para acceder sin que solicite contraseña**
@@ -20,7 +20,7 @@ Finalmente nos genera dos ficheros:
 * **~/.ssh/id_dsa**: Para la clave privada
 * **~/.ssh/id_dsa.pub**: Para la clave publica.
 
-![imagen](https://github.com/naujgs/SWAP1516/blob/master/Practica2/img/keygen_ssh_equi1.jpg"Figura 1")
+![imagen](https://github.com/naujgs/SWAP1516/blob/master/Practica2/img/keygen_ssh_equi1.jpg)
 
 Realizamos el mismo proceso en el equipo 2.
 

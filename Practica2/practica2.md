@@ -37,21 +37,7 @@ En la siguiente imagen podemos ver la ejecucion de la orden en ambos equipo.
 
 ![img](https://github.com/naujgs/SWAP1516/blob/master/Practica2/img/ssh_envio_clave_publica.jpg)
 
-Sera el fichero *~/.ssh/id_dsa.pub* el que tendremos que copiar en el otro equipo
-(maquina 2). Para ello nos conectaremos al equipo dos atraves de ssh, y le
-enviaremos nuestra clave pública.
-Ahora nos pedira que nos identifiquemos, pero al finalizar este ejercicio veremos
-que esto dejara de ser asi.
-
-
-
-Por lo que en la maquina 1 ejecutare el comando **ssh root@172.16.91.129**. En caso
-de tener algun problema tendremos que irnos al directorio **/etc/ssh/sshd_config**
-,poner el parametro **PermitRootLogin** a **yes** y reiniciar el servicio **service ssh restart**.
+Como podemos ver en la imagen, nos da error de identificion. Por lo que debemos ir al fichero **/etc/ssh/sshd_config**
+de cada equipo y cambiar el parametro **PermitRootLogin** a **yes** y reiniciar el servicio **service ssh restart**.
 
 ![imagen](https://github.com/naujgs/SWAP1516/blob/master/Practica2/img/ssh_permisosRoot.jpg)
-
-A continuacion vemos como establecemos la conexion entre el equipo 1 y el 2.
-![imagen](https://github.com/naujgs/SWAP1516/blob/master/Practica2/img/ssh_conexion.jpg)
-
-Por ultimo lo que haremos sera enviar

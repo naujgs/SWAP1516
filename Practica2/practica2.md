@@ -62,3 +62,15 @@ Y sera este fichero el que comprima y guarde en la maquina 2. Para demostrar el 
 funcionamiento, mostrare el contenido del directorio personal en la maquina 2.
 
 ![img](https://github.com/naujgs/SWAP1516/blob/master/Practica2/img/compresion_remoto_antes.jpg)
+
+En la siguiente imagen vemos la ejecucion de la orden para la compresion de nuestros
+directorio de prueba y como no se crea ningun fichero en este.
+
+![img](https://github.com/naujgs/SWAP1516/blob/master/Practica2/img/compresion_creacion.jpg)
+
+Y por ultimo comprobamos el contenido de nuestro equipo remoto, en el que si vemos que se
+ha creado el fichero comprimido.
+
+![img](https://github.com/naujgs/SWAP1516/blob/master/Practica2/img/compresion_remoto_despues.jpg)
+***
+##Ejercicio 3

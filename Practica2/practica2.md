@@ -20,6 +20,8 @@ Finalmente nos genera dos ficheros:
 * **~/.ssh/id_dsa**: Para la clave privada
 * **~/.ssh/id_dsa.pub**: Para la clave publica.
 
-**(Ver [Figura 1](https://github.com/naujgs/SWAP1516/blob/master/Practica2/img/keygen_ssh_equi1.jpg))** // Keygen_ssh_equi1
+**(Ver [Figura 1](https://github.com/naujgs/SWAP1516/blob/master/Practica2/img/keygen_ssh_equi1.jpg))**
 
 Sera el fichero *~/.ssh/id_dsa.pub* el que tendremos que copiar en el otro fichero
+
+![imagen](https://github.com/naujgs/SWAP1516/blob/master/Practica2/img/keygen_ssh_equi1.jpg)

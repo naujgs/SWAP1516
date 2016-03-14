@@ -20,7 +20,7 @@ Finalmente nos genera dos ficheros:
 * **~/.ssh/id_dsa**: Para la clave privada
 * **~/.ssh/id_dsa.pub**: Para la clave publica.
 
-![imagen](https://github.com/naujgs/SWAP1516/blob/master/Practica2/img/keygen_ssh_equi1.jpg)
+![imagen](https://github.com/naujgs/SWAP1516/blob/master/Practica2/img/keygen_ssh_equi1.jpg"Figura 1")
 
 Realizamos el mismo proceso en el equipo 2.
 

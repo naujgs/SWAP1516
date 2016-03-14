@@ -91,4 +91,4 @@ servicio apache.
 
 Una vez tenemos nuestro directorio ejecutamos nuestra orden. En la imagen inferior podemos
 ver como en la maquina 1 (derecha) en un principio no tenemos el directorio. Y tras ejecuta
-el comando en la maquina 2 (izquierda) si que tenemos el directorio clonado
+el comando en la maquina 2 (izquierda) si que tenemos el directorio clonado.

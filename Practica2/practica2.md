@@ -33,9 +33,14 @@ Para ver la ip de nuestros equipos, ejecutaremos el comando *ifconfig*.En mi cas
 * *Equipo 1* 172.16.91.128
 * *Equipo 2* 172.16.91.129
 
-En la siguiente imagen podemos ver la ejecucion de la orden en ambos equipo.
+En la siguiente imagen podemos ver el resultado de la ejecucion
 
 ![img](https://github.com/naujgs/SWAP1516/blob/master/Practica2/img/ssh_envio_clave_publica.jpg)
+
+Como podemos ver, unicamente nos pide la clave del usuario remoto para establecer la conexion ssh.
+En la imagen de abajo vemos como al realizar una conexion ssh ya no nos pide identificacion.
+
+![img](https://github.com/naujgs/SWAP1516/blob/master/Practica2/img/ssh_conexion_conClave.jpg)
 
 Como podemos ver en la imagen, nos da error de identificion. Por lo que debemos ir al fichero **/etc/ssh/sshd_config**
 de cada equipo y cambiar el parametro **PermitRootLogin** a **yes** y reiniciar el servicio **service ssh restart**.

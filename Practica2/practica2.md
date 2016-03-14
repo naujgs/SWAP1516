@@ -77,4 +77,10 @@ ha creado el fichero comprimido.
 Para la realización de este ejercicio utilizaremos la herramienta **rsync**. Asi que procederemos
 a su instalacion. Para ello, primero haremos un **update** y un **upgrade** de nuestro sistema. Y
 luego ejecutaremos la orden **sudo apt-get install rsync**. Yo en mi caso ya la tengo
-instalada en ambas maquinas.
+instalada en ambas maquinas. Por lo que procedere directamente a su ejecucion.
+
+En este ejercicio creare un directorio en la maquina 2 y lo clonare en la maquina 1. Dicho
+directorio contendra un fichero de texto y una copia del fichero de configuracion del
+servicio apache.
+
+![img](https://github.com/naujgs/SWAP1516/blob/master/Practica2/img/clonar_contenido_dir.jpg)

@@ -72,6 +72,12 @@ En la imagen podemos ver el contenido del directorio antes y despues de ser clon
 ###Establecer una tarea en cron que se ejecute cada hora para mantener actualizado el contenido del directorio /var/www entre las dos máquinas
 
 Para la realizacion de este ejercicio, crearemos un script con una orden similar a la ejecutada en el ejercicio anterior. Con la finalidad de que nos copie en nuestra maquina (equipo 1) el contenido de nuestro directorio en la maquina remota (equipo2). El directorio que alvergara dicha copia se identificara con la fecha y hora del momento en el que se crea la copia.
+
 ```sh
 rsync -avz -e ssh juan2@172.16.91.129:/home/juan2 /home/juan1/BackUp_Eq2/$(date +%d-%m-%Y-%H:%M)
+```
+Una vez creado, le damos permisos de ejecucion.
+
+```sh
+chmod a+x script_backup.sh
 ```

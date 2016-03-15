@@ -1,6 +1,6 @@
 #Practica 2
 ***
-***Practica realizada por Juan González Serrano, para la asignatura de Servidores Webs de Áltas Prestaciones***
+> Practica realizada por Juan González Serrano, para la asignatura de Servidores Webs de Áltas Prestaciones
 ***
 ##Ejercicio 1
 ###Configuración de ssh para acceder sin que solicite contraseña

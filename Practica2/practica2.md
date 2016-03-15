@@ -61,7 +61,7 @@ rsync -avz -e ssh \<equipoRemoto\> \<dir_Remota\> \<dir_local\>
 En este ejercicio creare un directorio en la maquina 2 y lo clonare en la maquina 1. Dicho directorio contendrá un fichero de texto y una copia del fichero de configuración del servicio apache.
 
 <p aling="cneter">
-  <img src="https://github.com/naujgs/SWAP1516/blob/master/Practica2/img/clonar_contenido_dir.jpg">
+  <img src="https://github.com/naujgs/SWAP1516/blob/master/Practica2/img/clonar_contenido_dir.jpg" />
 </p>
 
 Una vez tenemos nuestro directorio ejecutamos nuestra orden. Para ello nos vamos al equipo 1 y ejecutamos la orden. Tras la cual copiara el contenido del directorio, que esta en el equipo 2.

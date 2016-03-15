@@ -76,13 +76,13 @@ Para la realización de este ejercicio, crearemos un script con una orden simila
 ```sh
 rsync -avz -e ssh juan2@172.16.91.129:/home/juan2/ /home/juan1/BackUp_Eq2/$(date +%Y-%m-%d-%H:%M)
 ```
-Una vez creado, le damos permisos de ejecucion.
+Una vez creado, le damos permisos de ejecución.
 
 ```sh
 sudo chmod a+x script_backup.sh
 ```
 
-Por ultimo lo que haremos sera añadir la tarea en el archivo */etc/crontab*. En la imagen podemos ver como quedaria nuestro fichero.
+Por ultimo lo que haremos sera añadir la tarea en el archivo */etc/crontab*. En la imagen podemos ver como quedaría nuestro fichero.
 
 ![img](https://github.com/naujgs/SWAP1516/blob/master/Practica2/img/crontab_modificacion.jpg)
 

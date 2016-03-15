@@ -62,11 +62,9 @@ En este ejercicio creare un directorio en la maquina 2 y lo clonare en la maquin
 
 
 
-
-
-<center>
-<div> <img src="https://github.com/naujgs/SWAP1516/blob/master/Practica2/img/clonar_contenido_dir.jpg"></div>
-</center>
+<p aling="center">
+  <img src="https://github.com/naujgs/SWAP1516/blob/master/Practica2/img/clonar_contenido_dir.jpg" />
+</p>
 
 Una vez tenemos nuestro directorio ejecutamos nuestra orden. Para ello nos vamos al equipo 1 y ejecutamos la orden. Tras la cual copiara el contenido del directorio, que esta en el equipo 2.
 

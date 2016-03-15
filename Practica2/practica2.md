@@ -54,7 +54,9 @@ Para la realización de este ejercicio utilizaremos la herramienta **rsync**. As
 
 La sintaxis del comando que ejecutaremos sera:
 
-**rsync -avz -e ssh \<equipoRemoto\> \<dir_Remota\> \<dir_local\>**
+```sh
+rsync -avz -e ssh \<equipoRemoto\> \<dir_Remota\> \<dir_local\>
+```
 
 En este ejercicio creare un directorio en la maquina 2 y lo clonare en la maquina 1. Dicho directorio contendra un fichero de texto y una copia del fichero de configuracion del servicio apache.
 

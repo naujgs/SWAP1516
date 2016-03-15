@@ -79,5 +79,5 @@ rsync -avz -e ssh juan2@172.16.91.129:/home/juan2 /home/juan1/BackUp_Eq2/$(date 
 Una vez creado, le damos permisos de ejecucion.
 
 ```sh
-chmod a+x script_backup.sh
+sudo chmod a+x script_backup.sh
 ```

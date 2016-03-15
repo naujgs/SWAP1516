@@ -30,8 +30,9 @@ En la imagen de abajo vemos como al realizar una conexion ssh ya no nos pide ide
 
 En el caso que necesitemos crear un tar.gz de un equipo y dejarlo en otro pero no disponemos de espacio en disco local, podemos usar ssh para crearlo directamente en el equipo destino. Para ello, deberemos indicar al comando tar que queremos que use stdout como destino y mandar con una pipe la salida al ssh. La sintaxis del comando seria:
 
-**tar czf - \<directorio\> | ssh \<equipoDestino\> 'cat > ~/tar.tgz'**
-
+´´´sh
+tar czf - \<directorio\> | ssh \<equipoDestino\> 'cat > ~/tar.tgz'
+```
 Para la realizacion de este ejercicio he creado, en el equipo 1, un directorio *Ejemplo Copia* en el que he creado un fichero de texto y he copiado el fichero de configuracion del servicio ssh.
 
 Y sera este fichero el que comprima y guarde en la maquina 2. Para demostrar el buen funcionamiento, mostrare el contenido del directorio personal en la maquina 2.

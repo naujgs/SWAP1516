@@ -9,7 +9,7 @@ En este ejercicio lo que vamos hacer es crear un par de claves *publica/privada*
 Nos vamos a la maquina 1 y en ella ejecutaremos el comando ***ssh-keygen -t dsa***. Nos preguntara por la ubicación donde deseamos que guarde los ficheros. En mi caso lo dejo en blanco, por lo que lo creara en mi directorio. Luego nos preguntara por una clave, dicha clave sera solicitada siempre que deseemos utilizar el par de claves, en mi caso lo dejo en blanco, por lo que no me solicitara ninguna clave. Finalmente nos genera dos ficheros:
 * **~/.ssh/id_dsa**: Para la clave privada
 * **~/.ssh/id_dsa.pub**: Para la clave publica.
-<p aling="center">
+<p aling="left">
   <img src="https://github.com/naujgs/SWAP1516/blob/master/Practica2/img/keygen_ssh_equi1.jpg" />
 </p>
 

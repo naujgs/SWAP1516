@@ -10,7 +10,7 @@ Nos vamos a la maquina 1 y en ella ejecutaremos el comando ***ssh-keygen -t dsa*
 * **~/.ssh/id_dsa**: Para la clave privada
 * **~/.ssh/id_dsa.pub**: Para la clave publica.
 
-<p aling="left">
+<p aling="center">
   <img src="https://github.com/naujgs/SWAP1516/blob/master/Practica2/img/keygen_ssh_equi1.jpg" />
 </p>
 

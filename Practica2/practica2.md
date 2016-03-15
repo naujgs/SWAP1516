@@ -81,3 +81,8 @@ Una vez creado, le damos permisos de ejecucion.
 ```sh
 sudo chmod a+x script_backup.sh
 ```
+***
+***
+
+
+Realizando la prueba de subida con el atom

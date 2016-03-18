@@ -82,16 +82,16 @@ Una vez creado nuestro script, le damos permisos de ejecución.
 sudo chmod a+x script_backup.sh
 ```
 
-Tambien tendremos que cambiar el usuario del directorio ```www``` y sus sucesores, en ambas maquinas. Esto lo hacemos porque este directorio pertenece al usuario *root* y realizando este cambio nos evitamos conflictos de usuarios al ejecutar nuestro script y la tarea programada.
-Este cambio se realiza con el comando ```chown``` culla sintaxis es la siguiente:
+Tambien tendremos que cambiar el usuario del directorio **www** y sus sucesores, en ambas maquinas. Esto lo hacemos porque este directorio pertenece al usuario *root* y realizando este cambio nos evitamos conflictos de usuarios al ejecutar nuestro script y la tarea programada.
+Este cambio se realiza con el comando **chown** culla sintaxis es la siguiente:
 
 ```sh
 chown -R <nuevo_usuario> <fichero>
 ```
 
-Por ultimo lo que haremos sera añadir la tarea al demonio cron. Para ello ejecutaremos el comando ```crontab -e```. En la imagen podemos ver como quedaría nuestro fichero.
+Por ultimo lo que haremos sera añadir la tarea al demonio cron. Para ello ejecutaremos el comando **crontab -e**. Elegiremos el editor de textos y se nos abrira el fichero **crontab**. Aqui escribiremos la sentencia para que nos ejecute nuestro script cada hora.
 
-![img](https://github.com/naujgs/SWAP1516/blob/master/Practica2/img/crontab_modificacion.jpg)
+![img](https://github.com/naujgs/SWAP1516/blob/master/Practica2/img/crontab_modificado.jpg)
 
 Por ultimo podemos comprobar en la imagen de abajo, como se ejecuta correctamente nuestra tarea programada.
 

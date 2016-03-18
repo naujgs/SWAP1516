@@ -71,7 +71,7 @@ En la imagen podemos ver el contenido del directorio antes y después de ser clo
 ##Ejercicio 4
 ###Establecer una tarea en cron que se ejecute cada hora para mantener actualizado el contenido del directorio /var/www entre las dos máquinas
 
-Para la realización de este ejercicio, crearemos un script con una orden similar a la ejecutada en el ejercicio anterior. Con la finalidad de que nos copie en el directorio ```*/var/www*``` de nuestra maquina (equipo 1) el contenido del /directorio ```*var/www*``` de la maquina remota (equipo2).
+Para la realización de este ejercicio, crearemos un script con una orden similar a la ejecutada en el ejercicio anterior. Con la finalidad de que nos copie en el directorio ```/var/www``` de nuestra maquina (equipo 1) el contenido del /directorio ```var/www``` de la maquina remota (equipo2).
 
 ```sh
 rsync -avz -e ssh juan2@172.16.91.129:/var/www /var/www
@@ -80,6 +80,13 @@ Una vez creado nuestro script, le damos permisos de ejecución.
 
 ```sh
 sudo chmod a+x script_backup.sh
+```
+
+Tambien tendremos que cambiar el usuario del directorio ```www``` y sus sucesores, en ambas maquinas. Esto lo hacemos porque este directorio pertenece al usuario *root* y realizando este cambio nos evitamos conflictos de usuarios al ejecutar nuestro script y la tarea programada.
+Este cambio se realiza con el comando ```chown``` culla sintaxis es la siguiente:
+
+```sh
+chown -R <nuevo_usuario> <fichero>
 ```
 
 Por ultimo lo que haremos sera añadir la tarea al demonio cron. Para ello ejecutaremos el comando ```crontab -e```. En la imagen podemos ver como quedaría nuestro fichero.

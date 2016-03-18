@@ -71,21 +71,26 @@ En la imagen podemos ver el contenido del directorio antes y después de ser clo
 ##Ejercicio 4
 ###Establecer una tarea en cron que se ejecute cada hora para mantener actualizado el contenido del directorio /var/www entre las dos máquinas
 
-Para la realización de este ejercicio, crearemos un script con una orden similar a la ejecutada en el ejercicio anterior. Con la finalidad de que nos copie en nuestra maquina (equipo 1) el contenido de nuestra carpeta personal en la maquina remota (equipo2). El directorio que albergara dicha copia se identificara con la fecha y hora del momento en el que se crea la copia.
+Para la realización de este ejercicio, crearemos un script con una orden similar a la ejecutada en el ejercicio anterior. Con la finalidad de que nos copie en el directorio */var/www* de nuestra maquina (equipo 1) el contenido del /directorio *var/www* de la maquina remota (equipo2).
 
 ```sh
-rsync -avz -e ssh juan2@172.16.91.129:/home/juan2/ /home/juan1/BackUp_Eq2/$(date +%Y-%m-%d-%H:%M)
+rsync -avz -e ssh juan2@172.16.91.129:/var/www /var/www
 ```
-Una vez creado, le damos permisos de ejecución.
+Una vez creado nuestro script, le damos permisos de ejecución.
 
 ```sh
 sudo chmod a+x script_backup.sh
 ```
 
-Por ultimo lo que haremos sera añadir la tarea en el archivo */etc/crontab*. En la imagen podemos ver como quedaría nuestro fichero.
+Por ultimo lo que haremos sera añadir la tarea al demonio cron. Para ello ejecutaremos el comando ```crontab -e```. En la imagen podemos ver como quedaría nuestro fichero.
 
 ![img](https://github.com/naujgs/SWAP1516/blob/master/Practica2/img/crontab_modificacion.jpg)
 
 Por ultimo podemos comprobar en la imagen de abajo, como se ejecuta correctamente nuestra tarea programada.
 
 ![img](https://github.com/naujgs/SWAP1516/blob/master/Practica2/img/tarea_programada.jpg)
+
+Tenemos que copiar el usuario del directorio "html" en ambos equipos
+
+
+http://apuntes-para-no-olvidar.blogspot.com.es/2011/02/cambio-de-propietario-en-una-carpeta.html

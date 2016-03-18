@@ -96,5 +96,3 @@ Por ultimo lo que haremos sera añadir la tarea al demonio cron. Para ello ejecu
 En la imagen inferior podemos ver el contenido del directorio **/var/www** antes y despues de la hora a la que esta programada la copia. De esta forma comprobamos el buen funcionamiento de crontab.
 
 ![img](https://github.com/naujgs/SWAP1516/blob/master/Practica2/img/crontab_ejecucion.jpg)
-
-http://apuntes-para-no-olvidar.blogspot.com.es/2011/02/cambio-de-propietario-en-una-carpeta.html

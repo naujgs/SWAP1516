@@ -89,7 +89,7 @@ Este cambio se realiza con el comando **chown** culla sintaxis es la siguiente:
 chown -R <nuevo_usuario> <fichero>
 ```
 
-Por ultimo lo que haremos sera añadir la tarea al demonio cron. Para ello ejecutaremos el comando **crontab -e**. Elegiremos el editor de textos y se nos abrira el fichero **crontab**. Aqui escribiremos la sentencia para que nos ejecute nuestro script cada hora.
+Por ultimo lo que haremos sera añadir la tarea al demonio cron. Para ello ejecutaremos el comando **crontab -e**. Elegiremos el editor de textos y se nos abrira el fichero **crontab**. Como vemos en la imagen inferior, nuestro script sera ejecutado todos los dias, todas las horas, en el minuto 30.
 
 ![img](https://github.com/naujgs/SWAP1516/blob/master/Practica2/img/crontab_modificado.jpg)
 

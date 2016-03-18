@@ -71,7 +71,7 @@ En la imagen podemos ver el contenido del directorio antes y después de ser clo
 ##Ejercicio 4
 ###Establecer una tarea en cron que se ejecute cada hora para mantener actualizado el contenido del directorio /var/www entre las dos máquinas
 
-Para la realización de este ejercicio, crearemos un script con una orden similar a la ejecutada en el ejercicio anterior. Con la finalidad de que nos copie en el directorio */var/www* de nuestra maquina (equipo 1) el contenido del /directorio *var/www* de la maquina remota (equipo2).
+Para la realización de este ejercicio, crearemos un script con una orden similar a la ejecutada en el ejercicio anterior. Con la finalidad de que nos copie en el directorio ```*/var/www*``` de nuestra maquina (equipo 1) el contenido del /directorio ```*var/www*``` de la maquina remota (equipo2).
 
 ```sh
 rsync -avz -e ssh juan2@172.16.91.129:/var/www /var/www

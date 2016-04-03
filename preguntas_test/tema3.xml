@@ -1,0 +1,17 @@
+<pregunta>
+  <enunciado>¿Cual de las siguientes opciones se puede conseguir con "NAT"?</enunciado>
+  <opcionA>Favorecer el servicio de base de datos</opcionA>
+  <opcionB>Ocultar las verdadesras IPs de los servidores ultimos</opcionB>
+  <opcionC>Mejorar la velocidad del servicio ofrecido</opcionC>
+  <opcionD>Poder ofrecer varios servicios distintos a la vez</opcionD>
+  <solucion>B</solucion>
+</pregunta>
+
+<pregunta>
+  <enunciado>De las siguientes configuraciones, ¿cual es la mas segura?</enunciado>
+  <opcionA>DMZ tradicional</opcionA>
+  <opcionB>DMZ simple</opcionB>
+  <opcionC>DMZ doble</opcionC>
+  <opcionD>DMZ no es nada seguro</opcionD>
+  <solucion>C</solucion>
+</pregunta>

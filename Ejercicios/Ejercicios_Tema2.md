@@ -18,3 +18,6 @@
 ###Ejercicio 2.4
 
 **Buscar ejemplos de balanceadores software y hardware**
+
+#####balanceadores Software:
+  + **HAProxy:** software de código abierto que proporciona alta disponibilidad de equilibrador de carga y el servidor proxy de TCP y HTTP basado en aplicaciones que se propaga a las solicitudes a través de múltiples servidores. Está escrito en C y tiene reputación de ser rápido y eficiente (en términos de uso del procesador y la memoria).

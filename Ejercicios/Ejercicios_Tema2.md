@@ -4,6 +4,7 @@
 
 **Calcular la disponibilidad del sistema si tenemos dos réplicas de cada elemento (en total 3 elementos en cada subsitema).**
 
+  Para calcular la disponibilidad dando un porcentaje, usamos la formula ``100-(tiempo_caida / periodo_tiempo) * 100``
 
 ###Ejercicio 2.2
 

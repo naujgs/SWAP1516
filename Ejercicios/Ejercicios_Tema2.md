@@ -19,5 +19,9 @@
 
 **Buscar ejemplos de balanceadores software y hardware**
 
-#####balanceadores Software:
-  + **HAProxy:** software de código abierto que proporciona alta disponibilidad de equilibrador de carga y el servidor proxy de TCP y HTTP basado en aplicaciones que se propaga a las solicitudes a través de múltiples servidores. Está escrito en C y tiene reputación de ser rápido y eficiente (en términos de uso del procesador y la memoria).d
+####Balanceadores Software:
+  + **HAProxy:** software de código abierto que proporciona alta disponibilidad de equilibrador de carga y el servidor proxy de TCP y HTTP basado en aplicaciones que se propaga a las solicitudes a través de múltiples servidores. Está escrito en C y tiene reputación de ser rápido y eficiente (en términos de uso del procesador y la memoria).
+
+  + **nginx:** es un servidor web/proxy inverso, ligero de alto rendimiento y un proxy para protocolos de correo electrónico (IMAP/POP3)
+
+  Es software libre y de código abierto; también existe una versión comercial distribuida bajo el nombre de nginx plus3. Es multiplataforma, por lo que corre en sistemas tipo Unix (GNU/Linux, BSD, Solaris, Mac OS X, etc.) y Windows.

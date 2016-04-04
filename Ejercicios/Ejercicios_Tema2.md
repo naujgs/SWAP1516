@@ -20,7 +20,37 @@
   ISP          |95%            
 
   La disponibilidad sera: ``85% * 90% * ... * 99.99% * 95% = 59.87%``
+  Para mejorar la disponibilidad del sistema, lo que haremos sera cada elemento. Por lo que la *Availability* de cada uno de ellos se calculara de la siguiente forma ``AS= AC1+((1-AC1)*AC2)`` Por ejemplo, el calculo de la *disponibilidad web* seria: ``85%+((1-85%)*85%) = 97.75%``
 
+  Asi que tras replicar todos los elementos de nuestro sistema, se nos queda la siguiente tabla:
+
+  Componente   | Availability  
+  :------------|:--------------
+  Web          |97.75%            
+  Application  |90%            
+  Database     |99.9%          
+  DNS          |98%            
+  Firewall     |97.75%            
+  Switch       |99%            
+  Data Center  |99.99%         
+  ISP          |95%
+
+Y la disponibilidad del sistema sera: **79.10%**
+
+Por ultimo, volveremos a replicar cada elemento de nuestro sistema (3 elementos en cada subsistema). Lo que nos dara la siguiente tabla de disponibilidad:
+
+Componente   | Availability  
+:------------|:--------------
+Web          |99.66%            
+Application  |99.9%            
+Database     |99.99%          
+DNS          |99.99%            
+Firewall     |99.66%            
+Switch       |99.99%            
+Data Center  |99.99%         
+ISP          |99.987%
+
+**97.9%** disponibilidad del sistema
 
 ###Ejercicio 2.2
 

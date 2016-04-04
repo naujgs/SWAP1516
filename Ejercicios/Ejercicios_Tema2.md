@@ -25,3 +25,15 @@
   + **nginx:** es un servidor web/proxy inverso, ligero de alto rendimiento y un proxy para protocolos de correo electrónico (IMAP/POP3)
 
   Es software libre y de código abierto; también existe una versión comercial distribuida bajo el nombre de nginx plus3. Es multiplataforma, por lo que corre en sistemas tipo Unix (GNU/Linux, BSD, Solaris, Mac OS X, etc.) y Windows.
+
+####Balanceadores Hardware:
+  + **KEMP Load Balancer:**
+    - Layer 4 and Layer 7 Load Balancing and Cookie Persistence
+    - SSl offload/SSL Acceleration
+    - Application Acceleration: HTTP Caching, Compression & IPS Security
+    - WAF ( Web Application Firewall)
+    - Global Server Load Balancing
+    - Edge Security Pack (Microsoft TMG Replacement)
+    - Application Health Checking
+    - Adaptative (Server Resource) Load Balacing
+    - Content Switching

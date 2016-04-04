@@ -7,6 +7,7 @@
   Para calcular la disponibilidad dando un porcentaje, usamos la formula ``100-(tiempo_caida / periodo_tiempo) * 100``
 
   De esta forma hemos rellenado los datos de la siguiente tabla:
+  
   | componente  | Availability  |
   |:------------|:--------------|
   |Web          |85%            |

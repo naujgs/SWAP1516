@@ -6,6 +6,20 @@
 
   Para calcular la disponibilidad dando un porcentaje, usamos la formula ``100-(tiempo_caida / periodo_tiempo) * 100``
 
+  De esta forma hemos rellenado los datos de la siguiente tabla:
+  | componente  | Availability  |
+  |:------------|:--------------|
+  |Web          |85%            |
+  |Application  |90%            |
+  |Database     |99.9%          |
+  |DNS          |98%            |
+  |Firewall     |85%            |
+  |Switch       |99%            |
+  |Data Center  |99.99%         |
+  |ISP          |95%            |
+
+  Tabla
+
 ###Ejercicio 2.2
 
 **Buscar frameworks y librerias para diferentes lenguajes que permitan hacer aplicaciones altamente disponibles con relativa facilidad**

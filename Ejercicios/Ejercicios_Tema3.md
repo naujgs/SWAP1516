@@ -53,3 +53,14 @@
         a continuación, haga clic en **Aceptar**.
 
   Para obtener más información acerca del filtrado de paquetes, vea http://go.microsoft.com/fwlink/?LinkId=89010 (puede estar en inglés).
+
+  ***Linux***
+  Aqui usaremos la herramienta *iptables*. Esta nos permite insertar y eliminar reglas de la tabla de filtrdo de paquetes del núcleo.
+  *IPtables* suele venir instalada por defecto en todas las distribuciones oficiales de linux. Aunque su configuración permite el trafico de todos los paquetes.
+
+  Para mas informacion de uso de la aplicacion y sus opciones escribiremos el comando:
+  ```sh
+    man iptables
+  ```
+
+  Tambien podemos consultar informacion de la siguiente web: [iptables](https://help.ubuntu.com/community/IptablesHowTo)

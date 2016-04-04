@@ -18,7 +18,7 @@
       - *CHANGE*: modifica una ruta existente.
 
   + ***Linux***
-  
+
     Para configurara el enrutamiento del trafico, en un servidor, usaremos el comando:
 
     ```sh
@@ -32,3 +32,9 @@
 
 ###Ejercicio 3.2
 **Buscar con qué órdenes de terminal o herramientas gráficas podemos configurar bajo Windows y bajo Linux el filtrado y bloqueo de paquetes.**
+
+  ***Windows Server***
+
+  Para agregar un filtro de paquetes, seguiremos los siguientes pasos:
+
+    1. Abrir *Enrutamiento y acceso remoto*.

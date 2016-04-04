@@ -5,6 +5,7 @@
 **Buscar con qué órdenes de terminal o herramientas gráficas podemos configurar bajo Windows y bajo Linux el enrutamiento del tráfico de un servidor para pasar el tráfico desde una subred a otra.**
 
   + ***Windows***
+
     Para configurar el enrutamiento del trafico, en un servidor usaremos el comando:
 
     ```sh
@@ -17,6 +18,7 @@
       - *CHANGE*: modifica una ruta existente.
 
   + ***Linux***
+  
     Para configurara el enrutamiento del trafico, en un servidor, usaremos el comando:
 
     ```sh

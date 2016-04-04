@@ -60,7 +60,7 @@
 
   Para mas informacion de uso de la aplicacion y sus opciones escribiremos el comando:
   ```sh
-    man iptables
+    $ man iptables
   ```
 
   Tambien podemos consultar informacion de la siguiente web: [iptables](https://help.ubuntu.com/community/IptablesHowTo)

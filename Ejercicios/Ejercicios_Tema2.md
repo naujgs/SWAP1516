@@ -30,7 +30,11 @@
 ###Ejercicio 2.3
 
 **¿Como analizar el nivel de carga de cada uno e los subsitemas en el servidor? Buscar herramientas y aprender a usarlas... ¡o recordar como usarlas!**
+  En mi caso encontre la apliacion *Sisoft Sandra*.
+  Sisoft Sandra nos permite obtener el rendimiento de varios dispositivos de nuestro ordenador como puede ser el procesador, la memoria o los discos duros, y compararlo con el obtenido por otros equipos.
+  Sisoft Sandra también nos muestra información sobre la configuración del software del sistema como puede ser información sobre DirectX, el uso de memoria o el sistema operativo.
 
+  Sitio oficial: [Sisoft Sandra](http://www.sisoftware.co.uk/)
 
 ###Ejercicio 2.4
 

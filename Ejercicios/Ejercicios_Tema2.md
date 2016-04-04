@@ -8,7 +8,7 @@
 
   De esta forma hemos rellenado los datos de la siguiente tabla:
 
-  componente   | Availability  
+  Componente   | Availability  
   :------------|:--------------
   Web          |85%            
   Application  |90%            
@@ -19,7 +19,8 @@
   Data Center  |99.99%         
   ISP          |95%            
 
-  Tabla
+  La disponibilidad sera: ``85% * 90% * ... * 99.99% * 95% = 59.87%``
+
 
 ###Ejercicio 2.2
 

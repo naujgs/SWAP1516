@@ -20,7 +20,7 @@
 
 
   <p align="center">
-  <img src="https://upload.wikimedia.org/wikipedia/en/thumb/9/9e/JQuery_logo.svg/1280px-JQuery_logo.svg.png" alt="" width="300" height="150">
+  <img src="https://upload.wikimedia.org/wikipedia/en/thumb/9/9e/JQuery_logo.svg/1280px-JQuery_logo.svg.png" alt="" width="150" height="300">
   </p>
   * **Jquerry**  es software libre y de código abierto. Que posee una doble licencia (la Licencia MIT y la Licencia Pública General de GNU v2), permitiendo su uso en proyectos libres y privados. jQuery, al igual que otras bibliotecas, ofrece una serie de funcionalidades basadas en JavaScript que de otra manera requerirían de mucho más código, es decir, con las funciones propias de esta biblioteca se logran grandes resultados en menos tiempo y espacio.
 

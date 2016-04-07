@@ -11,5 +11,6 @@ sudo apt-key add /tmp/nginx_signing.key
 rm -f /tmp/nginx_signing.key
 ```
 
-
-![img](https://github.com/naujgs/SWAP1516/blob/master/Practica3/img/nginx_import_llave.jpg)
+<p align="center">
+<img src="https://github.com/naujgs/SWAP1516/blob/master/Practica3/img/nginx_import_llave.jpg">
+</p>

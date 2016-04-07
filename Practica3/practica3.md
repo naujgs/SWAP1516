@@ -12,5 +12,5 @@ rm -f /tmp/nginx_signing.key
 ```
 
 <p align="center">
-<img src="https://github.com/naujgs/SWAP1516/blob/master/Practica3/img/nginx_import_llave.jpg">
+<img src="https://github.com/naujgs/SWAP1516/blob/master/Practica3/img/nginx_import_llave.jpg" height="200">
 </p>

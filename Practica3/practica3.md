@@ -5,10 +5,10 @@
 
 Para la instalación usaremos *apt-get*. Aunque lo primero sera improtar la clave del repositorio donde se encuentra el software.
 ```sh
-* cd /tmp/
-* wget http://nginx.org/keys/nginx_signing.key
-* sudo apt-key add /tmp/nginx_signing.key
-* rm -f /tmp/nginx_signing.key
+cd /tmp/
+wget http://nginx.org/keys/nginx_signing.key
+sudo apt-key add /tmp/nginx_signing.key
+rm -f /tmp/nginx_signing.key
 ```
 
 

@@ -33,3 +33,43 @@ apt-get install nginx
 
 La configuracion de *nginx* no nos vale tal cual está. Ya que corresponde a una funcionalidad de servidor web, asi que tenemos que modificar el fichero de configuracion ```/etc/nginx/conf.d/default.conf```. Deberemos eliminar el contenido del fichero al 100%, para crear la configuracion que necesitamos.
 En mi caso, en el directorio ```/etc/nginx/conf.d/``` esta vacio, por lo que directamente crearemos el fichero *default.conf*.
+
+<p align="center">
+<img src="https://github.com/naujgs/SWAP1516/blob/master/Practica3/img/nginx_crear_fich_conf.jpg">
+</p>
+
+Primero definiremos que maquinas forman nuestro cluster web, indicando las IP de todos los servidores finales de nuestra granja web. Esto lo haremos en la seccion *Upstream* .
+
+```sh
+upstream apaches {
+  server 172.16.91.128;
+  server 172.16.91.129;
+}
+```
+A continuación programamos la seccion *"server"*. Donde le indicaremos que use ese grupo definido antes (*upstream*) como las maquinas a las que debe repartir el trafico.
+
+Es importante definir el *"upstream"* al principio del fichero de configuración, fuera de sección *"server"*. También es importante que para que el proxy_pass funcione correctamente, indiquemos que la conexión entre nginx y los servidores finales sea HTTP 1.1 . Así como especificarle que debe eliminar la cabecera *Connection* (hacerla vacía) para evitar que se pase al servidor final la cabecera que indica el usuario. Así pues, el fichero de configuración debe quedar con el contenido siguiente*
+
+```sh
+server{
+  listen 80;
+  server_name balanceador;
+
+  access_log /var/log/nginx/balanceador.access.log;
+  error_log /var/log/nginx/balanceador.error.log;
+  root /var/www/;
+
+  location /
+  {
+    proxy_pass http://apaches;
+    proxy_set_header Host $host;
+    proxy_set_header X-Real-IP $remote_addr;
+    proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+    proxy_http_version 1.1;
+    proxy_set_header Connection "";
+  }
+}
+```
+<p align="center">
+<img src="https://github.com/naujgs/SWAP1516/blob/master/Practica3/img/nginx_conf.jpg">
+</p>

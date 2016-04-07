@@ -31,4 +31,4 @@ apt-get install nginx
 ```
 ## 2º Configurado de *nginx* como balanceador de carga
 
-La configuracion de *nginx* no nos vale tal cual está. Ya que corresponde a una funcionalidad de servidor web, asi que tenemos que modificar el fichero de configuracion ```/etc/nginx/conf.d/default.conf```. Deberemos eliminar el contenido del fichero al 100%, para crear la configuracion que necesitamos. *(yo renombrare el fichero "default.conf" por "bk_default.conf" y creare un fichero vacio que llamare "default.conf")
+La configuracion de *nginx* no nos vale tal cual está. Ya que corresponde a una funcionalidad de servidor web, asi que tenemos que modificar el fichero de configuracion ```/etc/nginx/conf.d/default.conf```. Deberemos eliminar el contenido del fichero al 100%, para crear la configuracion que necesitamos. *(yo renombrare el fichero "default.conf" por "bk_default.conf" y creare un fichero vacio que llamare "default.conf")*

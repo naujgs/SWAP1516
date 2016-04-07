@@ -73,3 +73,11 @@ server{
 <p align="center">
 <img src="https://github.com/naujgs/SWAP1516/blob/master/Practica3/img/nginx_conf.jpg">
 </p>
+
+El metodo de balanceo es *round-robin*, con la misma prioridad para todos los servidores.
+
+Una vez realizada la configuracion, procedemos a reiniciar el servicio para que se apliquen los cambios en la configuracion.
+
+```sh
+sudo service nginx restart
+```

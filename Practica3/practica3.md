@@ -22,3 +22,11 @@ echo "deb-src http://nginx.org/packages/ubuntu/ lucid nginx" >> /etc/apt/sources
 <p align="center">
 <img src="https://github.com/naujgs/SWAP1516/blob/master/Practica3/img/nginx_add_repos.jpg">
 </p>
+
+Por ultimo procederemos a la instalacion del paquete *nginx*:
+
+```sh
+apt-get update
+apt-get install nginx
+```
+## 2º Configurado de *nginx* como balanceador de carga

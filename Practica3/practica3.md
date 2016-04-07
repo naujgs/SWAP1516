@@ -14,8 +14,11 @@ rm -f /tmp/nginx_signing.key
   <img src="https://github.com/naujgs/SWAP1516/blob/master/Practica3/img/nginx_import_llave.jpg" height="300">
   </p>
 
-Ahora, añadimos el repositorio al fichero ``` /etc/apt/source.list```. Para ello ejecutaremos los siguientes comandos:
+Ahora, añadimos el repositorio al fichero *```/etc/apt/source.list```*. Para ello nos logueamos como root(```sudo su```) y ejecutaremos los siguientes comandos:
 ```sh
 echo "deb http://nginx.org/packages/ubuntu/ lucid nginx" >> /etc/apt/sources.list
 echo "deb-src http://nginx.org/packages/ubuntu/ lucid nginx" >> /etc/apt/sources.list
 ```
+<p align="center">
+<img src="https://github.com/naujgs/SWAP1516/blob/master/Practica3/img/nginx_add_repos.jpg" height="300">
+</p>

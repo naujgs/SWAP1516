@@ -1,0 +1,17 @@
+<pregunta>
+  <enunciado>El algoritmo de balanceo de carga basado en el menor número de conexiones:</enunciado>
+  <opcionA>Cada grupo de ponderacion tiene una prioridad y maximo de conexiones que puede atender</opcionA>
+  <opcionB>Supone a todas las máquinas con la misma potencia</opcionB>
+  <opcionC>El balanceador lleva la cuenta del número de conexionesde cada servidor</opcionC>
+  <opcionD>Podemos asignar un peso a cada maquina, segun queramos nosotros</opcionD>
+  <solucion>C</solucion>
+</pregunta>
+
+<pregunta>
+  <enunciado>¿Cual es un inconveniente del balanceo mediante DNS?</enunciado>
+  <opcionA>El DNS no tiene informacion sobre la disponibilidad de la maquina final.</opcionA>
+  <opcionB>Es sencillo de implementar</opcionB>
+  <opcionC>Sirve para distribuir el caudal de peticiones entre los servidores de la granja web</opcionC>
+  <opcionD>Todas las anteriores son incorrectas.</opcionD>
+  <solucion>A</solucion>
+</pregunta>

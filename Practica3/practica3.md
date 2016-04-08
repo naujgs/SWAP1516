@@ -87,3 +87,5 @@ sudo service nginx restart
 ```
 
 Si lo hemos echo todo bien en el fichero de configuracion, el servicio se reiniciara sin problema. Si no es asi, revisaremos nuestro fichero, corregiremos el problema y volveremos a intentar reiniciar el servicio *nginx*.
+
+Llegados a este punto, nos iremos a la maquina terminal en la que configuramos el **crontab** y comentaremos la linea que generaba la actualizacion de nuestro directorio web. Con la finalidad de que ambas maquinas sirvan paginas web distintas.

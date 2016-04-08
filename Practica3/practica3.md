@@ -36,11 +36,11 @@ El proceso de configuracion que se explica es para ```nginx v 1.8.0```
 La configuracion de *nginx* no nos vale tal cual está. Ya que corresponde a una funcionalidad de servidor web, asi que tenemos que modificar el fichero de configuracion ```/etc/nginx/conf.d/default.conf```. Deberemos eliminar el contenido del fichero al 100%, para crear la configuracion que necesitamos.
 Yo lo que hare sera cambiar el nombre del fichero por *bk_default.conf*. Esto lo hare con el comando ```mv default.conf bk_default.conf```
 
-Una vez echo esto, creamos un nuevo fichero que se llamara *default.conf* y que contendra nuestra configuracion para que nginx funcione como balanceador.
-
 <p align="center">
 <img src="https://github.com/naujgs/SWAP1516/blob/master/Practica3/img/nginx_cambiar_nom_fich_conf.jpg">
 </p>
+
+Una vez echo esto, creamos un nuevo fichero que se llamara *default.conf* y que contendra nuestra configuracion para que nginx funcione como balanceador.
 
 Primero definiremos que maquinas forman nuestro cluster web, indicando las IP de todos los servidores finales de nuestra granja web. Esto lo haremos en la seccion *Upstream* .
 

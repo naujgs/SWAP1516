@@ -86,6 +86,8 @@ Una vez realizada la configuracion, procedemos a reiniciar el servicio para que 
 sudo service nginx restart
 ```
 
+##3º Comprobacion de funcionamiento de *nginx*
+
 Si lo hemos echo todo bien en el fichero de configuracion, el servicio se reiniciara sin problema. Si no es asi, revisaremos nuestro fichero, corregiremos el problema y volveremos a intentar reiniciar el servicio *nginx*.
 
 Llegados a este punto, nos iremos a la maquina terminal en la que configuramos el **crontab** y comentaremos la linea que generaba la actualizacion de nuestro directorio web en ambas maquinas. Con la finalidad de que ambas maquinas sirvan paginas web distintas.
@@ -97,5 +99,62 @@ Por ultimo, abriremos una terminal en nuestra maquina anfitriona, y escribiremos
 <img src="https://github.com/naujgs/SWAP1516/blob/master/Practica3/img/nginx_prueba_balanceo.jpg">
 </p>
 
-
 En la imagen superior vemos como el balanceador nos da las webs de ambas maquinas.
+
+
+## 4º Instalar *haproxy*
+***
+Para evitarnos cualquier tipo de problema, lo primero que haremos sera parar el servicio de nginx
+
+<p align="center">
+<img src="https://github.com/naujgs/SWAP1516/blob/master/Practica3/img/nginx_parada_servicio.jpg">
+</p>
+***
+
+Para instalar *haproxy* ejecutaremos el comando:
+```sh
+apt-get install haproxy
+```
+
+<p align="center">
+<img src="https://github.com/naujgs/SWAP1516/blob/master/Practica3/img/haproxy_instalar.jpg">
+</p>
+
+## 5º Configurado de *haproxy* como balanceador de carga
+
+Para configurar *haproxy* trabajaremos con el fichero ```/etc/haproxy/haproxy.cfg```
+
+En mi caso lo que hare sera renombrar dicho fichero de configuracion y crear uno en su lugar con el mismo nombre, en el que escribire la configuracion necesaria para que el *haproxy* trabaje como balanceador de carga.
+
+<p align="center">
+<img src="https://github.com/naujgs/SWAP1516/blob/master/Practica3/img/haproxy_renombrar.jpg">
+</p>
+
+Un balanceador sencillo debe escuchar el trafico en el puerto 80 y redirigirlo a alguna de las maquinas servidoras finales (debe conocer sus IP). Por lo que usaremos como configuracion inicial la siguiente:
+
+<p align="center">
+<img src="https://github.com/naujgs/SWAP1516/blob/master/Practica3/img/haproxy_configuracion.jpg">
+</p>
+
+Como vemos, nuestro balanceador espera las peticiones por el puerto 80. Y las redigira a las dos maquinas servidoras, que tienen apache instalado y estan escuchando por el puerto 80.
+
+## 6º Comprobacion de funcionamiento de *haproxy*
+
+Una vez guardada la configuracion de *haproxy*, lanzaremos el servicio con el comando:
+
+```sh
+/usr/sbin/haproxy -f /etc/haproxy/haproxy.cfg
+```
+
+Tras ejecutar el comando, si nos sale ningun mensaje o aviso, todo ha ido bien.
+
+<p align="center">
+<img src="https://github.com/naujgs/SWAP1516/blob/master/Practica3/img/haproxy_reinicio.jpg">
+</p>
+
+Por lo que podemos empezar a hacer peticiones a la IP del balanceador.
+Para comprobar que todo ha ido bien, actuaremos la igual forma que con *nginx*
+
+<p align="center">
+<img src="https://github.com/naujgs/SWAP1516/blob/master/Practica3/img/haproxy_prueba_balanceo.jpg">
+</p>

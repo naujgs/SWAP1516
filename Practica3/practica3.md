@@ -88,4 +88,14 @@ sudo service nginx restart
 
 Si lo hemos echo todo bien en el fichero de configuracion, el servicio se reiniciara sin problema. Si no es asi, revisaremos nuestro fichero, corregiremos el problema y volveremos a intentar reiniciar el servicio *nginx*.
 
-Llegados a este punto, nos iremos a la maquina terminal en la que configuramos el **crontab** y comentaremos la linea que generaba la actualizacion de nuestro directorio web. Con la finalidad de que ambas maquinas sirvan paginas web distintas.
+Llegados a este punto, nos iremos a la maquina terminal en la que configuramos el **crontab** y comentaremos la linea que generaba la actualizacion de nuestro directorio web en ambas maquinas. Con la finalidad de que ambas maquinas sirvan paginas web distintas.
+Entraremos en el directorio web de cada maquina y modificaremos las webs que sirven, con la intencion de identificarlas. De esta forma confirmaremos que nginx esta balanceando las solicitudes.
+
+Por ultimo, abriremos una terminal en nuestra maquina anfitriona, y escribiremos el comando ```curl http://<ip_balanceador>```. Este comando nos mostrara en el terminal el codigo de la pagina web.
+
+<p align="center">
+<img src="https://github.com/naujgs/SWAP1516/blob/master/Practica3/img/nginx_prueba_balanceo.jpg">
+</p>
+
+
+En la imagen superior vemos como el balanceador nos da las webs de ambas maquinas.

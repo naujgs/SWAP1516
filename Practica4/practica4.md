@@ -33,3 +33,9 @@ Una vez conocemos Apache Benchmark, procederemos a ejecutarlo contra uno de los 
 ><p align="center">
   <img src="https://github.com/naujgs/SWAP1516/blob/master/Practica4/img/ab_top.png" width=600px>
   </p>
+
+Una vez finaliza la ejecucion del Apache Benchmark, nos aparecera en pantalla la informacion que este a obtenido de la ejecución
+
+<p align="center">
+  <img src="https://github.com/naujgs/SWAP1516/blob/master/Practica4/img/ab_ejecucion1.png" width=600px>
+  </p>

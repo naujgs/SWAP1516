@@ -37,5 +37,6 @@ Una vez conocemos Apache Benchmark, procederemos a ejecutarlo contra uno de los 
 Una vez finaliza la ejecucion del Apache Benchmark, nos aparecera en pantalla la informacion que este a obtenido de la ejecución
 
 <p align="center">
-  <img src="https://github.com/naujgs/SWAP1516/blob/master/Practica4/img/ab_ejecucion1.png" high=600px>
+  <img src="https://github.com/naujgs/SWAP1516/blob/master/Practica4/img/ab_ejecucion1.png" width=600px>
   </p>
+Auqneu en la imagen hemos lanzado 1.000.000 peticiones de 100 en 100. Nosotros lanzaremos 1.000.000 peticiones de 1.000 en 1.000 . Y realizaremos la ejecucion de ab 5 veces.

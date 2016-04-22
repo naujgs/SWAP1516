@@ -85,10 +85,16 @@ Para que nos sea mas comodo visualizar los resultados, tenemos las siguientes ta
   <img src="https://github.com/naujgs/SWAP1516/blob/master/Practica4/img/ab_ttfr.png">
   </p>
 
+Podemos ver como el servidor final tarda menos que el balanceador de carga en responder todas las peticiones. Esto se debe, a que el *"camino"* se se recorre a traves del balanceador de carga es mas largo.
+Tambien podemos ver como *nginx* tarda menos que *haproxy*
+
+
   <p align="center">
     <img src="https://github.com/naujgs/SWAP1516/blob/master/Practica4/img/ab_rps.png">
     </p>
 
+Y aqui podemos ver como el servidor final responde mas peticiones por segundo que el balanceador de carga. Algo normal, debido a que este es mas rapido como hemos visto en la grafica anterior.
+Tambien vemos que *nginx* responde mas peticiones por segundo que *haproxy*. Otro resultado igual de coherente, teniendo en cuenta la grafica anterior.
 
 
 Ahora realizaremos la misma operacion, pero contra el balanceador de carga. Primero con el *nginx* en funcionamiento y luego con el *haproxy*.

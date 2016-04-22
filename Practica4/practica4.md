@@ -41,7 +41,7 @@ Una vez finaliza la ejecucion del Apache Benchmark, nos aparecera en pantalla la
   <img src="https://github.com/naujgs/SWAP1516/blob/master/Practica4/img/ab_ejecucion1.png" width=600px>
   </p>
 
-En la siguiente tabla mostraremos algunos de los valores que obtenemos, de 5 ejecuciones del Apache Benchmark contra la maquina1.
+En la imagen vemos la ejecucion de Apache Benchmark con un millon de peticiones de mil en mil. Pero para el desarrollo de la practica realizaremos **1000 peticiones de 100 en 100**.
 
 | ab Servidor Solo | Time Taken for Test (s) | Failed requests | Request per second (/s) |
 |------------------|:-----------------------:|:---------------:|:-----------------------:|

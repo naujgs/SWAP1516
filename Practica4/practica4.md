@@ -40,3 +40,54 @@ Una vez finaliza la ejecucion del Apache Benchmark, nos aparecera en pantalla la
   <img src="https://github.com/naujgs/SWAP1516/blob/master/Practica4/img/ab_ejecucion1.png" width=600px>
   </p>
 Auqneu en la imagen hemos lanzado 1.000.000 peticiones de 150 en 150. Nosotros lanzaremos 1.000.000 peticiones de 1.000 en 1.000 . Y realizaremos la ejecucion de ab 5 veces.
+
+<table>
+  <tr>
+    <th>ab Servidor Solo<br></th>
+    <th>Time Taken<br>for Test (s)<br></th>
+    <th>Failed<br>requests<br></th>
+    <th>Request per<br>second (/s)<br></th>
+  </tr>
+  <tr>
+    <td>Medición 1<br></td>
+    <td>426'042</td>
+    <td>0</td>
+    <td>2347'19<br></td>
+  </tr>
+  <tr>
+    <td>Medición 2<br></td>
+    <td>451'557</td>
+    <td>0</td>
+    <td>2214'56</td>
+  </tr>
+  <tr>
+    <td>Medición 3<br></td>
+    <td>438'673<br></td>
+    <td>0</td>
+    <td>2279'6</td>
+  </tr>
+  <tr>
+    <td>Medicion 4<br></td>
+    <td></td>
+    <td></td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>Medicion 5<br></td>
+    <td></td>
+    <td></td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>Media</td>
+    <td></td>
+    <td></td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>Desviacion</td>
+    <td></td>
+    <td></td>
+    <td></td>
+  </tr>
+</table>

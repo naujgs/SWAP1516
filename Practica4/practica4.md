@@ -39,4 +39,4 @@ Una vez finaliza la ejecucion del Apache Benchmark, nos aparecera en pantalla la
 <p align="center">
   <img src="https://github.com/naujgs/SWAP1516/blob/master/Practica4/img/ab_ejecucion1.png" width=600px>
   </p>
-Auqneu en la imagen hemos lanzado 1.000.000 peticiones de 100 en 100. Nosotros lanzaremos 1.000.000 peticiones de 1.000 en 1.000 . Y realizaremos la ejecucion de ab 5 veces.
+Auqneu en la imagen hemos lanzado 1.000.000 peticiones de 150 en 150. Nosotros lanzaremos 1.000.000 peticiones de 1.000 en 1.000 . Y realizaremos la ejecucion de ab 5 veces.

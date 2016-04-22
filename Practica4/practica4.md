@@ -23,4 +23,4 @@ ab -n <nº de peticiones> -c <nº concurrencia> <direccion destinataria>
 * **nº de concurrencia:** cantidad de peticiones que se enviaran al servidor destinatario, en cada solicitud
 * **direccion destinataria:** direccion o identificador del servidor al que enviaremos las peticiones
 
-Por ejemplo, para enviarle mil peticiones a google, de cien en cien, ejecutaremos el comando: ```sh ab -n 1000 -c 100 http://www.google.com```
+Por ejemplo, para enviarle mil peticiones a google, de cien en cien, ejecutaremos el comando: ```ab -n 1000 -c 100 http://www.google.com```

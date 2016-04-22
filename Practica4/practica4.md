@@ -123,7 +123,7 @@ siege <opciones de ejecucion> <direccion destinataria>
 La manera de proceder sera igual que con *Apache Benchmark*. Primero ejecutaremos *Siege* contra un servidor final, luego contra el balanceador de carga con *nginx* y luego contra el balanceador de carga con *haproxy*.
 
 | Maquina 1      | Availability | Response Time | Transaction rate | Failed transact | Longest Transact |
-|----------------|-------------:|--------------:|-----------------:|----------------:|-----------------:|
+|:---------------|-------------:|--------------:|-----------------:|----------------:|-----------------:|
 | Medición 1     |       100,0% |          0,17 |            88,41 |               0 |             0,63 |
 | Medición 2     |       100,0% |          0,17 |            86,26 |               0 |             0,42 |
 | Medición 3     |       100,0% |          0,17 |            86,98 |               0 |             0,46 |
@@ -133,7 +133,7 @@ La manera de proceder sera igual que con *Apache Benchmark*. Primero ejecutaremo
 | **Desviación** |   **0,000**  |   **0,009**   |     **3,593**    |    **0,000**    |     **5,281**    |
 
 | Balanceador (nginx) | Availability | Response Time | Transaction rate | Failed transact | Longest Transact |
-|----------------:|-------------:|--------------:|-----------------:|----------------:|-----------------:|
+|:----------------|-------------:|--------------:|-----------------:|----------------:|-----------------:|
 | Medición 1      |       100,0% |          0,44 |            34,32 |               0 |             0,80 |
 | Medición 2      |       100,0% |          0,42 |            35,82 |               0 |             0,79 |
 | Medición 3      |       100,0% |          0,41 |            36,09 |               0 |             0,74 |
@@ -143,7 +143,7 @@ La manera de proceder sera igual que con *Apache Benchmark*. Primero ejecutaremo
 |**Desviación**   | **0,000**    | **0,012**     |  **0,765**       |  **0,000**      |   **0,030**      |
 
 | Balanceador (haproxy) | Availability | Response Time | Transaction rate | Failed transact | Longest Transact |
-|-------------------:|-------------:|--------------:|-----------------:|----------------:|-----------------:|
+|:-------------------|-------------:|--------------:|-----------------:|----------------:|-----------------:|
 | Medición 1         |       100,0% |          0,40 |            37,40 |               0 |             0,50 |
 | Medición 2         |       100,0% |          0,39 |            38,16 |               0 |             0,49 |
 | Medición 3         |       100,0% |          0,40 |            37,54 |               0 |             0,48 |

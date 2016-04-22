@@ -1,9 +1,9 @@
 #Práctica 4
 >Practica realizada por *Juan González Serrano*, para la asignatrua de Servidores Webs de Altas Prestaciones
 
----
+***
 Para la realizacion de esta practica lo que haremos sera ejecutar los Benchmark desde la maquina anfitriona, contra los servidores.
----
+***
 
 ##1º Comprobar el rendimineto de servidores web con Apache Benchmark
 

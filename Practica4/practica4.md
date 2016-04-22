@@ -31,5 +31,5 @@ Una vez conocemos Apache Benchmark, procederemos a ejecutarlo contra uno de los 
 Si durante la ejecucion del benchmark en nuestra maquina anfitriona, ejecutaremos *top* en el servidor final, veremos todos los procesos que se generan por las peticiones del benchmark.
 
 <p align="center">
-  <img src="https://github.com/naujgs/SWAP1516/blob/master/Practica4/img/ab_top.png" width=20px>
+  <img src="https://github.com/naujgs/SWAP1516/blob/master/Practica4/img/ab_top.png" width=15cm>
   </p>

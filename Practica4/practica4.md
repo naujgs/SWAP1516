@@ -26,7 +26,8 @@ ab -n <nº de peticiones> -c <nº concurrencia> <direccion destinataria>
 Por ejemplo, para enviarle mil peticiones a google, de cien en cien, ejecutaremos el comando: ```ab -n 1000 -c 100 http://www.google.com```
 
 ###1.1 Ejecutar Apache Benchmark contra un servidor final
-Una vez conocemos Apache Benchmark, procederemos a ejecutarlo contra uno de los servidores finales. Para ello iniciaremos una de nuestras maquinas finales *(por ejemplo la maquina1)*, pondremos a funcionar nuestro servidor Apache y desde la maquina anfitriona empezaremos a enviarle peticiones del Benchmark.
+Una vez conocemos Apache Benchmark, procederemos a ejecutarlo contra uno de los servidores finales. Introduciremos una imagen en el directorio web del servidor, y al ejecutar Apache Benchmark le pediremos esa imagen.
+Iniciaremos una de nuestras maquinas finales *(por ejemplo la maquina1)*, pondremos a funcionar nuestro servidor Apache y desde la maquina anfitriona empezaremos a enviarle peticiones del Benchmark.
 
 >Si durante la ejecucion del benchmark en nuestra maquina anfitriona, ejecutaremos *top* en el servidor final, veremos todos los procesos que se generan por las peticiones del benchmark.
 
@@ -40,7 +41,7 @@ Una vez finaliza la ejecucion del Apache Benchmark, nos aparecera en pantalla la
   <img src="https://github.com/naujgs/SWAP1516/blob/master/Practica4/img/ab_ejecucion1.png" width=600px>
   </p>
 
-En la siguiente tabla mostraremos algunos de los valores que obtenemos, de 5 ejecuciones del Apache Benchmark contra la maquina1
+En la siguiente tabla mostraremos algunos de los valores que obtenemos, de 5 ejecuciones del Apache Benchmark contra la maquina1.
 
 <table>
   <tr>
@@ -92,3 +93,5 @@ En la siguiente tabla mostraremos algunos de los valores que obtenemos, de 5 eje
     <td></td>
   </tr>
 </table>
+
+Ahora realizaremos la misma operacion, pero contra el balanceador de carga. Primero con el *nginx* en funcionamiento y luego con el *haproxy*.

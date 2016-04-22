@@ -25,9 +25,9 @@ ab -n <nº de peticiones> -c <nº concurrencia> <direccion destinataria>
 
 Por ejemplo, para enviarle mil peticiones a google, de cien en cien, ejecutaremos el comando: ```ab -n 1000 -c 100 http://www.google.com```
 
-###1.1 Ejecutar Apache Benchmark contra un servidor final
-Una vez conocemos Apache Benchmark, procederemos a ejecutarlo contra uno de los servidores finales. Introduciremos una imagen en el directorio web del servidor, y al ejecutar Apache Benchmark le pediremos esa imagen.
-Iniciaremos una de nuestras maquinas finales *(por ejemplo la maquina1)*, pondremos a funcionar nuestro servidor Apache y desde la maquina anfitriona empezaremos a enviarle peticiones del Benchmark.
+###1.1Ejecutar Apache Benchmark
+Una vez conocemos Apache Benchmark, procederemos a ejecutarlo. Introduciremos una imagen en el directorio web de los servidores y al ejecutar Apache Benchmark le pediremos esa imagen.
+Primero lo ejecutaremos contra un servidor final, luego contra el balanceador de carga con nginx funcionando y luego contra el balanceador de carga con haproxy funcionando.
 
 >Si durante la ejecucion del benchmark en nuestra maquina anfitriona, ejecutaremos *top* en el servidor final, veremos todos los procesos que se generan por las peticiones del benchmark.
 
@@ -42,6 +42,8 @@ Una vez finaliza la ejecucion del Apache Benchmark, nos aparecera en pantalla la
   </p>
 
 En la imagen vemos la ejecucion de Apache Benchmark con un millon de peticiones de mil en mil. Pero para el desarrollo de la practica realizaremos **1000 peticiones de 100 en 100**.
+
+En las siguientes tablas, se recogen los datos de las ejecuciones con las distintas configuraciones
 
 | ab Servidor Solo | Time Taken for Test (s) | Failed requests | Request per second (/s) |
 |------------------|:-----------------------:|:---------------:|:-----------------------:|
@@ -96,5 +98,26 @@ Tambien podemos ver como *nginx* tarda menos que *haproxy*
 Y aqui podemos ver como el servidor final responde mas peticiones por segundo que el balanceador de carga. Algo normal, debido a que este es mas rapido como hemos visto en la grafica anterior.
 Tambien vemos que *nginx* responde mas peticiones por segundo que *haproxy*. Otro resultado igual de coherente, teniendo en cuenta la grafica anterior.
 
+##2º Comprobar el rendimineto de servidores web con Siege
 
-Ahora realizaremos la misma operacion, pero contra el balanceador de carga. Primero con el *nginx* en funcionamiento y luego con el *haproxy*.
+Siege es una herramienta de generación de carga HTTP para benchmarking. Se trata de una utilidad de línea de comandos, similar en interfaz al Apache Benchmark, aunque con opciones de ejecución ligeramente diferentes.
+
+Para poder ejecutarlo, primero deberemos instalarlo. Para ello escribiremos el comando:
+```sh
+apt-get install siege
+```
+
+Para ejecutarlo, escribiremos el siguiente comando:
+```sh
+siege <opciones de ejecucion> <direccion destinataria>
+```
+
+* Las opciones de ejecucion que utilizaremos seran -b -t60S -v
+  + **-b** ejecutaremos los tests sin pausas con lo que comprobaremos el rendimiento general
+  + **-t60s** ejecutaremos *siege* durante 60 segundos
+  + **-v** le indicamos que nos muestre mas informacion
+* Direccion o identificador del servidor al que enviaremos las peticiones
+
+###1.1Ejecutar Siege
+
+La manera de proceder sera igual que con *Apache Benchmark*. Primero ejecutaremos *Siege* contra un servidor final, luego contra el balanceador de carga con *nginx* y luego contra el balanceador de carga con *haproxy*.

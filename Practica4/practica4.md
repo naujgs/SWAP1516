@@ -43,55 +43,52 @@ Una vez finaliza la ejecucion del Apache Benchmark, nos aparecera en pantalla la
 
 En la siguiente tabla mostraremos algunos de los valores que obtenemos, de 5 ejecuciones del Apache Benchmark contra la maquina1.
 
-<table>
-  <tr>
-    <th>ab Servidor Solo<br></th>
-    <th>Time Taken<br>for Test (s)<br></th>
-    <th>Failed<br>requests<br></th>
-    <th>Request per<br>second (/s)<br></th>
-  </tr>
-  <tr>
-    <td>Medición 1<br></td>
-    <td>426'042</td>
-    <td>0</td>
-    <td>2347'19<br></td>
-  </tr>
-  <tr>
-    <td>Medición 2<br></td>
-    <td>451'557</td>
-    <td>0</td>
-    <td>2214'56</td>
-  </tr>
-  <tr>
-    <td>Medición 3<br></td>
-    <td>438'673<br></td>
-    <td>0</td>
-    <td>2279'6</td>
-  </tr>
-  <tr>
-    <td>Medicion 4<br></td>
-    <td></td>
-    <td></td>
-    <td></td>
-  </tr>
-  <tr>
-    <td>Medicion 5<br></td>
-    <td></td>
-    <td></td>
-    <td></td>
-  </tr>
-  <tr>
-    <td>Media</td>
-    <td></td>
-    <td></td>
-    <td></td>
-  </tr>
-  <tr>
-    <td>Desviacion</td>
-    <td></td>
-    <td></td>
-    <td></td>
-  </tr>
-</table>
+| ab Servidor Solo | Time Taken for Test (s) | Failed requests | Request per second (/s) |
+|------------------|:-----------------------:|:---------------:|:-----------------------:|
+| Medición 1       |                  11,339 |               0 |                   88,19 |
+| Medición 2       |                  11,509 |               0 |                   88,89 |
+| Medición 3       |                  11,141 |               0 |                   89,76 |
+| Medicion 4       |                  11,016 |               0 |                   90,77 |
+| Medicion 5       |                  11,239 |               0 |                   88,97 |
+|       Media      |          11,249         |      0,000      |          89,316         |
+|    Desviacion    |          0,188          |      0,000      |          0,985          |
+
+Ahora los datos de la ejecucion contra el balanceador de carga con *nginx.*
+
+| ab Servidor Solo | Time Taken for Test (s) | Failed requests | Request per second (/s) |
+|------------------|:-----------------------:|:---------------:|:-----------------------:|
+| Medición 1       |                  27,677 |               0 |                   36,13 |
+| Medición 2       |                  27,319 |               0 |                    36,6 |
+| Medición 3       |                  27,441 |               0 |                   36,44 |
+| Medicion 4       |                  28,051 |               0 |                   35,65 |
+| Medicion 5       |                  27,230 |               0 |                   36,72 |
+|       Media      |          27,544         |      0,000      |          36,308         |
+|    Desviacion    |          0,330          |      0,000      |          0,429          |
+
+Y ahora contra el balanceador de carga con *haproxy*
+
+
+
+| ab Servidor Solo | Time Taken for Test (s) | Failed requests | Request per second (/s) |
+|------------------|:-----------------------:|:---------------:|:-----------------------:|
+| Medición 1       |                  29,728 |               0 |                   33,64 |
+| Medición 2       |                  31,592 |               0 |                   31,65 |
+| Medición 3       |                  30,355 |               0 |                   32,94 |
+| Medicion 4       |                  32,030 |               0 |                   31,22 |
+| Medicion 5       |                  30,582 |               0 |                    32,7 |
+|       Media      |          30,857         |      0,000      |          32,430         |
+|    Desviacion    |          0,938          |      0,000      |          0,984          |
+
+Para que nos sea mas comodo visualizar los resultados, tenemos las siguientes tablas en las que comparamos la media y desviacion estantadar de los 3 datos que hemos tomado con las 3 configuraciones.
+
+<p align="center">
+  <img src="https://github.com/naujgs/SWAP1516/blob/master/Practica4/img/ab_ttfr.png">
+  </p>
+
+  <p align="center">
+    <img src="https://github.com/naujgs/SWAP1516/blob/master/Practica4/img/ab_rps.png">
+    </p>
+
+
 
 Ahora realizaremos la misma operacion, pero contra el balanceador de carga. Primero con el *nginx* en funcionamiento y luego con el *haproxy*.

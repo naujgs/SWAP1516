@@ -52,8 +52,8 @@ En las siguientes tablas, se recogen los datos de las ejecuciones con las distin
 | Medición 3       |                  11,141 |               0 |                   89,76 |
 | Medicion 4       |                  11,016 |               0 |                   90,77 |
 | Medicion 5       |                  11,239 |               0 |                   88,97 |
-|       Media      |          11,249         |      0,000      |          89,316         |
-|    Desviacion    |          0,188          |      0,000      |          0,985          |
+|   **Media**      |      **11,249**         |  **0,000**      |      **89,316**         |
+|**Desviacion**    |      **0,188**          |  **0,000**      |      **0,985**          |
 
 Ahora los datos de la ejecucion contra el balanceador de carga con *nginx.*
 
@@ -64,8 +64,8 @@ Ahora los datos de la ejecucion contra el balanceador de carga con *nginx.*
 | Medición 3       |                  27,441 |               0 |                   36,44 |
 | Medicion 4       |                  28,051 |               0 |                   35,65 |
 | Medicion 5       |                  27,230 |               0 |                   36,72 |
-|       Media      |          27,544         |      0,000      |          36,308         |
-|    Desviacion    |          0,330          |      0,000      |          0,429          |
+|   **Media**      |      **27,544**         |  **0,000**      |      **36,308**         |
+|**Desviacion**    |      **0,330**          |  **0,000**      |      **0,429**          |
 
 Y ahora contra el balanceador de carga con *haproxy*
 
@@ -78,8 +78,8 @@ Y ahora contra el balanceador de carga con *haproxy*
 | Medición 3       |                  30,355 |               0 |                   32,94 |
 | Medicion 4       |                  32,030 |               0 |                   31,22 |
 | Medicion 5       |                  30,582 |               0 |                    32,7 |
-|       Media      |          30,857         |      0,000      |          32,430         |
-|    Desviacion    |          0,938          |      0,000      |          0,984          |
+|   **Media**      |      **30,857**         |  **0,000**      |      **32,430**         |
+|**Desviacion**    |      **0,938**          |  **0,000**      |      **0,984**          |
 
 Para que nos sea mas comodo visualizar los resultados, tenemos las siguientes tablas en las que comparamos la media y desviacion estantadar de los 3 datos que hemos tomado con las 3 configuraciones.
 
@@ -131,3 +131,23 @@ La manera de proceder sera igual que con *Apache Benchmark*. Primero ejecutaremo
 | Medición 5     |       100,0% |          0,19 |            79,50 |               0 |            12,45 |
 | **Media**      |   **1,000**  |   **0,174**   |    **85,766**    |    **0,000**    |     **3,016**    |
 | **Desviación** |   **0,000**  |   **0,009**   |     **3,593**    |    **0,000**    |     **5,281**    |
+
+| Balanceador (nginx) | Availability | Response Time | Transaction rate | Failed transact | Longest Transact |
+|--------------------:|-------------:|--------------:|-----------------:|----------------:|-----------------:|
+| Medición 1          |       100,0% |          0,44 |            34,32 |               0 |             0,80 |
+| Medición 2          |       100,0% |          0,42 |            35,82 |               0 |             0,79 |
+| Medición 3          |       100,0% |          0,41 |            36,09 |               0 |             0,74 |
+| Medición 4          |       100,0% |          0,41 |            36,18 |               0 |             0,73 |
+| Medición 5          |       100,0% |          0,42 |            35,91 |               0 |             0,77 |
+|**Media**            | **1,000**    | **0,420**     |  **35,664**      |  **0,000**      |   **0,766**      |
+|**Desviación**       | **0,000**    | **0,012**     |  **0,765**       |  **0,000**      |   **0,030**      |
+
+| Balanceador (haproxy) | Availability | Response Time | Transaction rate | Failed transact | Longest Transact |
+|----------------------:|-------------:|--------------:|-----------------:|----------------:|-----------------:|
+| Medición 1            |       100,0% |          0,40 |            37,40 |               0 |             0,50 |
+| Medición 2            |       100,0% |          0,39 |            38,16 |               0 |             0,49 |
+| Medición 3            |       100,0% |          0,40 |            37,54 |               0 |             0,48 |
+| Medición 4            |       100,0% |          0,41 |            36,61 |               0 |             0,58 |
+| Medición 5            |       100,0% |          0,39 |            38,23 |               0 |             0,46 |
+|**Media**              | **1,000**    | **0,398**     |  **37,588**      |  **0,000**      |   **0,502**      |
+| **Desviación**        | **0,000**    | **0,008**     |   **0,658**      |  **0,000**      |   **0,046**      |

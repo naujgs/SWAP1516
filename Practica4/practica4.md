@@ -28,8 +28,8 @@ Por ejemplo, para enviarle mil peticiones a google, de cien en cien, ejecutaremo
 ###1.1 Ejecutar Apache Benchmark contra un servidor final
 Una vez conocemos Apache Benchmark, procederemos a ejecutarlo contra uno de los servidores finales. Para ello iniciaremos una de nuestras maquinas finales *(por ejemplo la maquina1)*, pondremos a funcionar nuestro servidor Apache y desde la maquina anfitriona empezaremos a enviarle peticiones del Benchmark.
 
-Si durante la ejecucion del benchmark en nuestra maquina anfitriona, ejecutaremos *top* en el servidor final, veremos todos los procesos que se generan por las peticiones del benchmark.
+>Si durante la ejecucion del benchmark en nuestra maquina anfitriona, ejecutaremos *top* en el servidor final, veremos todos los procesos que se generan por las peticiones del benchmark.
 
-<p align="center">
-  <img src="https://github.com/naujgs/SWAP1516/blob/master/Practica4/img/ab_top.png" width=550px>
+><p align="center">
+  <img src="https://github.com/naujgs/SWAP1516/blob/master/Practica4/img/ab_top.png" width=600px>
   </p>

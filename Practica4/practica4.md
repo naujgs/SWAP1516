@@ -128,9 +128,9 @@ La manera de proceder sera igual que con *Apache Benchmark*. Primero ejecutaremo
 | Medición 2     |       100,0% |          0,17 |            86,26 |               0 |             0,42 |
 | Medición 3     |       100,0% |          0,17 |            86,98 |               0 |             0,46 |
 | Medición 4     |       100,0% |          0,17 |            87,68 |               0 |             1,12 |
-| Medición 5     |       100,0% |          0,19 |            79,50 |               0 |            12,45 |
-| **Media**      |   **1,000**  |   **0,174**   |    **85,766**    |    **0,000**    |     **3,016**    |
-| **Desviación** |   **0,000**  |   **0,009**   |     **3,593**    |    **0,000**    |     **5,281**    |
+| Medición 5     |       100,0% |          0,19 |            79,50 |               0 |             0,41 |
+| **Media**      |   **1,000**  |   **0,174**   |    **85,766**    |    **0,000**    |     **0,608**    |
+| **Desviación** |   **0,000**  |   **0,009**   |     **3,593**    |    **0,000**    |     **0,3**      |
 
 | Balanceador (nginx) | Availability | Response Time | Transaction rate | Failed transact | Longest Transact |
 |:----------------|-------------:|--------------:|-----------------:|----------------:|-----------------:|
@@ -165,14 +165,14 @@ Por ultimo, compararemos los datos obtenidos con las tres configuraciones median
     <img src="https://github.com/naujgs/SWAP1516/blob/master/Practica4/img/siege_respTim_des.png">
     <p>Desviación</p>
   </div>
-**
+***
 <div align="center">    
   <img src="https://github.com/naujgs/SWAP1516/blob/master/Practica4/img/siege_respTim_med.png">
   <p>Media</p>    
   <img src="https://github.com/naujgs/SWAP1516/blob/master/Practica4/img/siege_respTim_des.png">
   <p>Desviación</p>
 </div>
-**
+***
 <div align="center">    
   <img src="https://github.com/naujgs/SWAP1516/blob/master/Practica4/img/siege_transRat_med.png">
   <p>Media</p>    

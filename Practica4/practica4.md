@@ -154,14 +154,35 @@ La manera de proceder sera igual que con *Apache Benchmark*. Primero ejecutaremo
 
 Por ultimo, compararemos los datos obtenidos con las tres configuraciones mediante graficas.
 
-  <div align="center">
-    <p>Media</p>
+  <div align="center">    
     <img src="https://github.com/naujgs/SWAP1516/blob/master/Practica4/img/siege_dispo_med.png">  
-  </div>
-
-  <div align="center">
     <p>Media</p>
-    <img src="https://github.com/naujgs/SWAP1516/blob/master/Practica4/img/siege_respTim_med.png">
-    <p>Desviación</p>
-    <img src="https://github.com/naujgs/SWAP1516/blob/master/Practica4/img/siege_respTim_des.png">
   </div>
+***
+  <div align="center">    
+    <img src="https://github.com/naujgs/SWAP1516/blob/master/Practica4/img/siege_respTim_med.png">
+    <p>Media</p>    
+    <img src="https://github.com/naujgs/SWAP1516/blob/master/Practica4/img/siege_respTim_des.png">
+    <p>Desviación</p>
+  </div>
+**
+<div align="center">    
+  <img src="https://github.com/naujgs/SWAP1516/blob/master/Practica4/img/siege_respTim_med.png">
+  <p>Media</p>    
+  <img src="https://github.com/naujgs/SWAP1516/blob/master/Practica4/img/siege_respTim_des.png">
+  <p>Desviación</p>
+</div>
+**
+<div align="center">    
+  <img src="https://github.com/naujgs/SWAP1516/blob/master/Practica4/img/siege_transRat_med.png">
+  <p>Media</p>    
+  <img src="https://github.com/naujgs/SWAP1516/blob/master/Practica4/img/siege_transRat_des.png">
+  <p>Desviación</p>
+</div>
+***
+<div align="center">    
+  <img src="https://github.com/naujgs/SWAP1516/blob/master/Practica4/img/siege_LongTrans_med.png">
+  <p>Media</p>    
+  <img src="https://github.com/naujgs/SWAP1516/blob/master/Practica4/img/siege_LongTrans_des.png">
+  <p>Desviación</p>
+</div>

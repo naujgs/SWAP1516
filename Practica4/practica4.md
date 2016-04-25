@@ -154,7 +154,7 @@ La manera de proceder sera igual que con *Apache Benchmark*. Primero ejecutaremo
 
 Por ultimo, compararemos los datos obtenidos con las tres configuraciones mediante graficas.
 
-  <p align="center">
-  <h4 align="center">Media</h4>
+  <div align="center">
+  <h5>Media</h5>
   <img src="https://github.com/naujgs/SWAP1516/blob/master/Practica4/img/siege_dispo_med.png">
-  </p>
+  </div>

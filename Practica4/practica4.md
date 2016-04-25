@@ -118,7 +118,7 @@ siege <opciones de ejecucion> <direccion destinataria>
   + **-v** le indicamos que nos muestre mas informacion
 * Direccion o identificador del servidor al que enviaremos las peticiones
 
-###1.1Ejecutar Siege
+###2.1Ejecutar Siege
 
 La manera de proceder sera igual que con *Apache Benchmark*. Primero ejecutaremos *Siege* contra un servidor final, luego contra el balanceador de carga con *nginx* y luego contra el balanceador de carga con *haproxy*.
 
@@ -151,3 +151,10 @@ La manera de proceder sera igual que con *Apache Benchmark*. Primero ejecutaremo
 | Medición 5         |       100,0% |          0,39 |            38,23 |               0 |             0,46 |
 |**Media**           | **1,000**    | **0,398**     |  **37,588**      |  **0,000**      |   **0,502**      |
 | **Desviación**     | **0,000**    | **0,008**     |   **0,658**      |  **0,000**      |   **0,046**      |
+
+Por ultimo, compararemos los datos obtenidos con las tres configuraciones mediante graficas.
+
+  <p align="center">
+  <img src="https://github.com/naujgs/SWAP1516/blob/master/Practica4/img/siege_dispo_med.png">
+  <h3>Media</h3>
+  </p>

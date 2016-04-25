@@ -155,6 +155,13 @@ La manera de proceder sera igual que con *Apache Benchmark*. Primero ejecutaremo
 Por ultimo, compararemos los datos obtenidos con las tres configuraciones mediante graficas.
 
   <div align="center">
-  <h5>Media</h5>
-  <img src="https://github.com/naujgs/SWAP1516/blob/master/Practica4/img/siege_dispo_med.png">
+    <p>Media</p>
+    <img src="https://github.com/naujgs/SWAP1516/blob/master/Practica4/img/siege_dispo_med.png">  
+  </div>
+
+  <div align="center">
+    <p>Media</p>
+    <img src="https://github.com/naujgs/SWAP1516/blob/master/Practica4/img/siege_respTim_med.png">
+    <p>Desviación</p>
+    <img src="https://github.com/naujgs/SWAP1516/blob/master/Practica4/img/siege_respTim_des.png">
   </div>

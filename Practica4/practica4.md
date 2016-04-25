@@ -156,5 +156,5 @@ Por ultimo, compararemos los datos obtenidos con las tres configuraciones median
 
   <p align="center">
   <img src="https://github.com/naujgs/SWAP1516/blob/master/Practica4/img/siege_dispo_med.png">
-  <h3>Media</h3>
+  <h3 align="center">Media</h3>
   </p>

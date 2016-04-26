@@ -1,0 +1,17 @@
+<pregunta>
+  <enunciado>Las contraseñas de BIOS y de consola son un punto a tener en cuenta en el nivel...</enunciado>
+  <opcionA>Pregunta trampa, a la BIOS no se le puede poner contraseña</opcionA>
+  <opcionB>De administrador</opcionB>
+  <opcionC>Físico</opcionC>
+  <opcionD>De red</opcionD>
+  <solucion>C</solucion>
+</pregunta>
+
+<pregunta>
+  <enunciado>¿Cual de los siguientes no es un objetivo de seguridad?</enunciado>
+  <opcionA>Integridad</opcionA>
+  <opcionB>Confidencialidad</opcionB>
+  <opcionC>Disponibilidad</opcionC>
+  <opcionD>Responsabilidad</opcionD>
+  <solucion>D</solucion>
+</pregunta>

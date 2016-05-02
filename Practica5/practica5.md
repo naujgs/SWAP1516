@@ -60,5 +60,19 @@ A continuacion comprobamos que se haya creado la copia de la base de datos en el
 
 <div align="center">
     <img src="https://github.com/naujgs/SWAP1516/blob/master/Practica5/img/mysqldump_local_comprobacion.png">
-    <p> Comprobacion creacion copia BD mysqldump</p>
+    <p> Comprobacion creacion copia BD <i>mysqldump</i></p>
 </div>
+
+Una vez ya hemos creado nuestra copia, procedemos a desbloquear las tablas:
+
+<div align="center">
+    <img src="https://github.com/naujgs/SWAP1516/blob/master/Practica5/img/bd_desbloquear.png">
+    <p> Desbloqueo acutalización base de datos</p>
+</div>
+
+Ahora, nos iremos a la maquina de backup (maquina2) y copiaremos el fichero *.SQL* que hemos creado en la maquina maestra (maquina1). Para ello utilizaremos **scp** con la siguiente sintaxis:
+
+```sh
+scp <user_remoto>@<direcion_remoto>:<path_copia_bd_Original> <path_destino_copia_bd>
+```
+En la siguiente imagen podemos ver un ejemplo de ejecución

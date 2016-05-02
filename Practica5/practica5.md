@@ -53,12 +53,12 @@ Ahora procederemos a crear una copia local de nuestra base de datos. Para ello, 
 
 <div align="center">
     <img src="https://github.com/naujgs/SWAP1516/blob/master/Practica5/img/mysqldump_local.png">
-    <p> Ejecucion de *mysqldump*</p>
+    <p> Ejecucion de <i>mysqldump</i></p>
 </div>
 
 A continuacion comprobamos que se haya creado la copia de la base de datos en el directorio especificado
 
 <div align="center">
     <img src="https://github.com/naujgs/SWAP1516/blob/master/Practica5/img/mysqldump_local_comprobacion.png">
-    <p> Comprobacion creacion copia BD *mysqldump*</p>
+    <p> Comprobacion creacion copia BD mysqldump</p>
 </div>

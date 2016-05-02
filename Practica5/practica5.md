@@ -10,5 +10,7 @@ sudo apt install mysql-server
 Crearemos una base de datos en MySQL e insertaremos algunos datos. De esta forma, tendremos informacion con la cual hacer las copias de seguridad.
 En todo momento usaremos la interfaz de linea de comandos del MySQL.
 
- crearemos una base de datos en MySQL e insertaremos algunos datos.
-En el caso de no tener instalado el servidor de MySQL, tendremos que instalarlo con el comando:
+<div align="center">
+    <img src="https://github.com/naujgs/SWAP1516/blob/master/Practica5/img/bd_crear.png">
+    <p> Creacion de base de datos</p>
+</div>

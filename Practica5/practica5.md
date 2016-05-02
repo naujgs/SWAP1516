@@ -24,3 +24,41 @@ Ya tenemos una pequeña base de datos con algunos datos.
 
 **mysqldump** es una herramienta para clonar las bases de datos que tenemos en nuestras maquinas.
 Forma parte de los programas de clente de *MySQL*. Permite el volcado de una o varias base de datos, con la intencion de crear copias de seguridad o para transferir datos a otro servidor *SQL* (no necesariamente un servidor *MySQL*)
+
+*mysqldump* tiene una gran cantidad de opciones, por lo que para obtener informacion podremos consultar la siguiente direccion:
+
+http://dev.mysql.com/doc/refman/5.0/es/mysqldump.html
+
+Tambien podemos consultar el manual en linea
+
+```sh
+mysqldump --help
+```
+
+La sintaxis de uso es la siguiente:
+
+```sh
+mysqldump <base_datos> -u root -p > <path_destino_copia>
+```
+
+Esto puede ser suficiente, pero tenemos que tener en cuenta que los datos pueden estar actualizándose constantemente en el servidor de BD principal. Por lo que, antes de hacer la copia de seguridad en el archivo *.SQL* debemos evitar que se
+acceda a la BD para cambiar nada.
+
+<div align="center">
+    <img src="https://github.com/naujgs/SWAP1516/blob/master/Practica5/img/bd_bloquear.png">
+    <p> Bloqueo actualización base de datos</p>
+</div>
+
+Ahora procederemos a crear una copia local de nuestra base de datos. Para ello, primero nos loguearemos como *root*
+
+<div align="center">
+    <img src="https://github.com/naujgs/SWAP1516/blob/master/Practica5/img/mysqldump_local.png">
+    <p> Ejecucion de *mysqldump*</p>
+</div>
+
+A continuacion comprobamos que se haya creado la copia de la base de datos en el directorio especificado
+
+<div align="center">
+    <img src="https://github.com/naujgs/SWAP1516/blob/master/Practica5/img/mysqldump_local_comprobacion.png">
+    <p> Comprobacion creacion copia BD *mysqldump*</p>
+</div>

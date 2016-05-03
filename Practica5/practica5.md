@@ -91,3 +91,8 @@ En la siguiente imagen podemos ver un ejemplo de ejecución. Primero ejecutando 
 
 Pero si nos fijamos, la copia de la base de datos la hice en el directorio */root/* pero las copias las realizo al directorio personal. Esto se debe a que tenia problemas de permisos al directorio *root*.
 En ese caso, la solucion seria enviar la copia a cualquier directorio del equipo remoto y despues conectarnos por ssh y asi colocarlo en el directorio idoneo.
+
+<div align="center">
+    <img src="https://github.com/naujgs/SWAP1516/blob/master/Practica5/img/scp_ejecucion.png">
+    <p> Envio copia base datos | Reubicacion son ssh</p>
+</div>

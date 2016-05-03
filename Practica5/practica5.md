@@ -87,3 +87,7 @@ En la siguiente imagen podemos ver un ejemplo de ejecución. Primero ejecutando 
     <img src="https://github.com/naujgs/SWAP1516/blob/master/Practica5/img/scp_demostracion.png">
     <p> Envio copia base de datos con herramienta SCP</p>
 </div>
+
+
+Pero si nos fijamos, la copia de la base de datos la hice en el directorio */root/* pero las copias las realizo al directorio personal. Esto se debe a que tenia problemas de permisos al directorio *root*.
+En ese caso, la solucion seria enviar la copia a cualquier directorio del equipo remoto y despues conectarnos por ssh y asi colocarlo en el directorio idoneo.

@@ -76,9 +76,9 @@ Ahora, nos iremos a la maquina de backup (maquina2) y copiaremos el fichero *.SQ
 scp [[user@]host1:]file1 ... [[user@]host2:]file2
 ```
 
-* [user@]host1:]file1
++ **[user@]host1:]file1**
       El origen, donde se especifica él archivo o archivos que serán copiados, puede o no contener la información del ordenador remoto, y también puede contener la información del usuario que es dueño del archivo o archivos en el ordenador remoto. Si el usuario no esta especificado, entonces por defecto usará los datos del usuario actual en el ordenador donde estas escribiendo el comando. Y si ningún ordenador remoto es especificado, entonces buscará el archivo localmente
-* [[user@]host2:]file2
++ **[[user@]host2:]file2**
       El destino, donde se especifica la vía donde los archivos serán copiados, es decir el destino de los mismos, y de nuevo, puede o no contener la información sobre el ordenador remoto y el usuario en ese ordenador. Al igual que fuera explicado arriba, si el usuario no se especifica pero si el nombre o el IP de un ordenador, en ese caso tratará de obtener acceso a ese ordenador remoto usando las credenciales del usuario actual, y si no se especifica ordenador remoto, se asume que el destino de los archivos es local.
 
 En la siguiente imagen podemos ver un ejemplo de ejecución

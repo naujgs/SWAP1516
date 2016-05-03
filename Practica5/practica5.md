@@ -81,4 +81,9 @@ scp [[user@]host1:]file1 ... [[user@]host2:]file2
 + **[[user@]host2:]file2**
       El destino, donde se especifica la vía donde los archivos serán copiados, es decir el destino de los mismos, y de nuevo, puede o no contener la información sobre el ordenador remoto y el usuario en ese ordenador. Al igual que fuera explicado arriba, si el usuario no se especifica pero si el nombre o el IP de un ordenador, en ese caso tratará de obtener acceso a ese ordenador remoto usando las credenciales del usuario actual, y si no se especifica ordenador remoto, se asume que el destino de los archivos es local.
 
-En la siguiente imagen podemos ver un ejemplo de ejecución
+En la siguiente imagen podemos ver un ejemplo de ejecución. Primero ejecutando el comando desde la maquina *maestro* y luego desde la maquina *esclavo*
+
+<div align="center">
+    <img src="https://github.com/naujgs/SWAP1516/blob/master/Practica5/img/scp_demostracion.png">
+    <p> Envio copia base de datos con herramienta SCP</p>
+</div>

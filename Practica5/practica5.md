@@ -73,6 +73,6 @@ Una vez ya hemos creado nuestra copia, procedemos a desbloquear las tablas:
 Ahora, nos iremos a la maquina de backup (maquina2) y copiaremos el fichero *.SQL* que hemos creado en la maquina maestra (maquina1). Para ello utilizaremos **scp** con la siguiente sintaxis:
 
 ```sh
-scp <user_remoto>@<direcion_remoto>:<path_copia_bd_Original> <path_destino_copia_bd>
+scp [[user@]host1:]file1 ... [[user@]host2:]file2
 ```
 En la siguiente imagen podemos ver un ejemplo de ejecución

@@ -20,7 +20,7 @@ En todo momento usaremos la interfaz de linea de comandos del MySQL.
 
 Ya tenemos una pequeña base de datos con algunos datos.
 
-###2º Replicacion e una Base de Datos con *mysqldump*
+###2º Replicacion de una Base de Datos con *mysqldump*
 
 **mysqldump** es una herramienta para clonar las bases de datos que tenemos en nuestras maquinas.
 Forma parte de los programas de clente de *MySQL*. Permite el volcado de una o varias base de datos, con la intencion de crear copias de seguridad o para transferir datos a otro servidor *SQL* (no necesariamente un servidor *MySQL*)
@@ -109,3 +109,18 @@ Es importante destacar que el archivo *.SQL* de copia de seguridad tiene formato
     <img src="https://github.com/naujgs/SWAP1516/blob/master/Practica5/img/bd_restauracion_bk.png">
     <p> Restauracion, en equipo remoto, de la base de datos con la informacion del equipo maestro</p>
 </div>
+
+Accederemos a la base de datos y consultaremos su contenido para comprobar que el proceso se ha realizado con exito.
+
+<div align="center">
+    <img src="https://github.com/naujgs/SWAP1516/blob/master/Practica5/img/bd_bk_comprobacion.png">
+    <p> Contenido de la base de datos en el equipo backup</p>
+</div>
+
+También podemos hacer la orden directamente usando un “pipe” a un ssh para exportar los datos al mismo tiempo (siempre y cuando en la máquina secundaria ya hubiéramos creado la BD):
+
+```sh
+mysqldump ejemplodb -u root -p | ssh equipoDestino mysql
+```
+
+###3º Replicacion de una Base de Datos mediante una configuración *maestro-esclavo*

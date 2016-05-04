@@ -1,35 +1,35 @@
 #Práctica 5
->Practica realizada por *Juan González Serrano*, para la asignatrua de Servidores Webs de Altas Prestaciones
+>Practica realizada por *Juan González Serrano*, para la asignatura de Servidores Webs de Altas Prestaciones
 
 ***
 
-###1º Creacion de una Base de Datos e insertado de datos
+###1º Creación de una Base de Datos e insertado de datos
 
-Para la realizacion de esta practica, necesitaremos tener instalado el MySQL server en los dos servidores finales. En el caso de que no lo tengamos, podremos instalarlo con el comando:
+Para la realización de esta practica, necesitaremos tener instalado el MySQL server en los dos servidores finales. En el caso de que no lo tengamos, podremos instalarlo con el comando:
 ```sh
 sudo apt install mysql-server
 ```
 
-Crearemos una base de datos en MySQL e insertaremos algunos datos. De esta forma, tendremos informacion con la cual hacer las copias de seguridad.
+Crearemos una base de datos en MySQL e insertaremos algunos datos. De esta forma, tendremos información con la cual hacer las copias de seguridad.
 En todo momento usaremos la interfaz de linea de comandos del MySQL.
 
 <div align="center">
     <img src="https://github.com/naujgs/SWAP1516/blob/master/Practica5/img/bd_crear.png">
-    <p> Creacion de base de datos e insercion de datos</p>
+    <p> Creación de base de datos e inserción de datos</p>
 </div>
 
 Ya tenemos una pequeña base de datos con algunos datos.
 
-###2º Replicacion de una Base de Datos con *mysqldump*
+###2º Replicación de una Base de Datos con *mysqldump*
 
 **mysqldump** es una herramienta para clonar las bases de datos que tenemos en nuestras maquinas.
-Forma parte de los programas de clente de *MySQL*. Permite el volcado de una o varias base de datos, con la intencion de crear copias de seguridad o para transferir datos a otro servidor *SQL* (no necesariamente un servidor *MySQL*)
+Forma parte de los programas de cliente de *MySQL*. Permite el volcado de una o varias base de datos, con la intención de crear copias de seguridad o para transferir datos a otro servidor *SQL* (no necesariamente un servidor *MySQL*)
 
-*mysqldump* tiene una gran cantidad de opciones, por lo que para obtener informacion podremos consultar la siguiente direccion:
+*mysqldump* tiene una gran cantidad de opciones, por lo que para obtener información podremos consultar la siguiente dirección:
 
 http://dev.mysql.com/doc/refman/5.0/es/mysqldump.html
 
-Tambien podemos consultar el manual en linea
+También podemos consultar el manual en linea
 
 ```sh
 mysqldump --help
@@ -41,8 +41,7 @@ La sintaxis de uso es la siguiente:
 mysqldump <base_datos> -u root -p > <path_destino_copia>
 ```
 
-Esto puede ser suficiente, pero tenemos que tener en cuenta que los datos pueden estar actualizándose constantemente en el servidor de BD principal. Por lo que, antes de hacer la copia de seguridad en el archivo *.SQL* debemos evitar que se
-acceda a la BD para cambiar nada.
+Esto puede ser suficiente, pero tenemos que tener en cuenta que los datos pueden estar actualizándose constantemente en el servidor de BD principal. Por lo que, antes de hacer la copia de seguridad en el archivo *.SQL* debemos evitar que se acceda a la BD para cambiar nada.
 
 <div align="center">
     <img src="https://github.com/naujgs/SWAP1516/blob/master/Practica5/img/bd_bloquear.png">
@@ -53,21 +52,21 @@ Ahora procederemos a crear una copia local de nuestra base de datos. Para ello, 
 
 <div align="center">
     <img src="https://github.com/naujgs/SWAP1516/blob/master/Practica5/img/mysqldump_local.png">
-    <p> Ejecucion de <i>mysqldump</i></p>
+    <p> Ejecución de <i>mysqldump</i></p>
 </div>
 
-A continuacion comprobamos que se haya creado la copia de la base de datos en el directorio especificado
+A continuación comprobamos que se haya creado la copia de la base de datos en el directorio especificado
 
 <div align="center">
     <img src="https://github.com/naujgs/SWAP1516/blob/master/Practica5/img/mysqldump_local_comprobacion.png">
-    <p> Comprobacion creacion copia BD <i>mysqldump</i></p>
+    <p> Comprobación creación copia BD <i>mysqldump</i></p>
 </div>
 
 Una vez ya hemos creado nuestra copia, procedemos a desbloquear las tablas:
 
 <div align="center">
     <img src="https://github.com/naujgs/SWAP1516/blob/master/Practica5/img/bd_desbloquear.png">
-    <p> Desbloqueo acutalización base de datos</p>
+    <p> Desbloqueo actualización base de datos</p>
 </div>
 
 Ahora, nos iremos a la maquina de backup (maquina2) y copiaremos el fichero *.SQL* que hemos creado en la maquina maestra (maquina1). Para ello utilizaremos **scp** con la siguiente sintaxis:
@@ -85,20 +84,20 @@ En la siguiente imagen podemos ver un ejemplo de ejecución. Primero ejecutando 
 
 <div align="center">
     <img src="https://github.com/naujgs/SWAP1516/blob/master/Practica5/img/scp_demostracion.png">
-    <p> Envio copia base de datos con herramienta SCP</p>
+    <p> Envío copia base de datos con herramienta SCP</p>
 </div>
 
 
 Pero si nos fijamos, la copia de la base de datos la hice en el directorio */root/* pero las copias las realizo al directorio personal. Esto se debe a que tenia problemas de permisos al directorio *root*.
-En ese caso, la solucion seria enviar la copia a cualquier directorio del equipo remoto y despues conectarnos por ssh y asi colocarlo en el directorio idoneo.
+En ese caso, la solución seria enviar la copia a cualquier directorio del equipo remoto y después conectarnos por ssh y así colocarlo en el directorio idóneo.
 
 <div align="center">
     <img src="https://github.com/naujgs/SWAP1516/blob/master/Practica5/img/scp_ejecucion.png">
-    <p> Envio copia base datos | Reubicacion son ssh</p>
+    <p> Envío copia base datos | Reubicación son ssh</p>
 </div>
 
 Ya hemos realizado la copia.
-Es importante destacar que el archivo *.SQL* de copia de seguridad tiene formato de texto plano, e incluye las sentencias SQL para restaurar los datos contenidos en la BD en otra máquina. Sin embargo, la orden *mysqldump* no incluye en ese archivo la sentencia para crear la BD. Por lo que nosotros tendremos que crear primero la BD y despues restarurarla.
+Es importante destacar que el archivo *.SQL* de copia de seguridad tiene formato de texto plano, e incluye las sentencias SQL para restaurar los datos contenidos en la BD en otra máquina. Sin embargo, la orden *mysqldump* no incluye en ese archivo la sentencia para crear la BD. Por lo que nosotros tendremos que crear primero la BD y después restaurarla.
 
 <div align="center">
     <img src="https://github.com/naujgs/SWAP1516/blob/master/Practica5/img/mysqldump_crear_bd_remota.png">
@@ -107,10 +106,10 @@ Es importante destacar que el archivo *.SQL* de copia de seguridad tiene formato
 
 <div align="center">
     <img src="https://github.com/naujgs/SWAP1516/blob/master/Practica5/img/bd_restauracion_bk.png">
-    <p> Restauracion, en equipo remoto, de la base de datos con la informacion del equipo maestro</p>
+    <p> Restauración, en equipo remoto, de la base de datos con la información del equipo maestro</p>
 </div>
 
-Accederemos a la base de datos y consultaremos su contenido para comprobar que el proceso se ha realizado con exito.
+Accederemos a la base de datos y consultaremos su contenido para comprobar que el proceso se ha realizado con éxito.
 
 <div align="center">
     <img src="https://github.com/naujgs/SWAP1516/blob/master/Practica5/img/bd_bk_comprobacion.png">
@@ -123,4 +122,8 @@ También podemos hacer la orden directamente usando un “pipe” a un ssh para 
 mysqldump ejemplodb -u root -p | ssh equipoDestino mysql
 ```
 
-###3º Replicacion de una Base de Datos mediante una configuración *maestro-esclavo*
+###3º Replicación de una Base de Datos mediante una configuración *maestro-esclavo*
+
+La opcion anterior es tan valida como cualquier otra y funciona perfectamente. Pero es demasiado *manual*.
+Por ello *MySQL* nos ofrece la opción de configurar el demonio para hacer replicación de las *BD* sobre un esclavo a partir de los datos que almacena el maestro. Esto transforma el proceso manual realizado en el punto anterior, en un proceso completamente automatico.
+Para ello realizaremos una serie de configuraciones tanto en el servidor principal como en el secundario.

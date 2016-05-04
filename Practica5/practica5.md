@@ -96,3 +96,5 @@ En ese caso, la solucion seria enviar la copia a cualquier directorio del equipo
     <img src="https://github.com/naujgs/SWAP1516/blob/master/Practica5/img/scp_ejecucion.png">
     <p> Envio copia base datos | Reubicacion son ssh</p>
 </div>
+
+Ya hemos realizado la copia

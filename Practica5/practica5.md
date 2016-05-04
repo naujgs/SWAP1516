@@ -97,4 +97,15 @@ En ese caso, la solucion seria enviar la copia a cualquier directorio del equipo
     <p> Envio copia base datos | Reubicacion son ssh</p>
 </div>
 
-Ya hemos realizado la copia
+Ya hemos realizado la copia.
+Es importante destacar que el archivo *.SQL* de copia de seguridad tiene formato de texto plano, e incluye las sentencias SQL para restaurar los datos contenidos en la BD en otra máquina. Sin embargo, la orden *mysqldump* no incluye en ese archivo la sentencia para crear la BD. Por lo que nosotros tendremos que crear primero la BD y despues restarurarla.
+
+<div align="center">
+    <img src="https://github.com/naujgs/SWAP1516/blob/master/Practica5/img/mysqldump_crear_bd_remota.png">
+    <p> Creo la base de datos en el equipo remoto</p>
+</div>
+
+<div align="center">
+    <img src="https://github.com/naujgs/SWAP1516/blob/master/Practica5/img/bd_restauracion_bk.png">
+    <p> Restauracion, en equipo remoto, de la base de datos con la informacion del equipo maestro</p>
+</div>

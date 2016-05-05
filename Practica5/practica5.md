@@ -177,3 +177,10 @@ Tras realizar estas configuraciones, guardamos el fichero y reiniciamos el servi
 Si no nos ha dado ningún error la configuración del maestro, podemos pasar a hacer la configuración del *mysql* del esclavo. Para ello editaremos como *root* el fichero **/etc/mysql/my.conf**
 
 La configuración es similar a la del maestro, con la diferencia del *Paso 2 (server-id)* que en este caso es **2**
+
+Tras realizar los cambios en la configuración reiniciamos el servicio y si no nos da ningun error es que hemos tenido exito en la configuración.
+
+<div align="center">
+    <img src="https://github.com/naujgs/SWAP1516/blob/master/Practica5/img/reinicio_mysql_slave_after_conf.png">
+    <p> Reinicio del servicio <i>MySQL</i> tras realizar cambios en configuracion</p>
+</div>

@@ -247,3 +247,6 @@ Para comprobar que todo esta bien nos iremos al equipo *maestro* insertaremos un
     <img src="https://github.com/naujgs/SWAP1516/blob/master/Practica5/img/demonio_mysql_comprobar_funcionamiento.png">
     <p> Comprobacion de funcionamiento del demonio</p>
 </div>
+
+
+A la izquierda tenemos la terminal del equipo *maestro* y a la derecha la del equipo *esclavo*

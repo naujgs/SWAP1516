@@ -220,3 +220,13 @@ Por ultimo arrancamos el *esclavo*, para que los demonios de *MySQL* de ambas ma
     <img src="https://github.com/naujgs/SWAP1516/blob/master/Practica5/img/demonio_mysql_inicio_slave.png">
     <p> Inicialización del esclavo</p>
 </div>
+
+
+Para finalizar, volvemos al equipo *maestro* y volvemos a activar las tablas para que puedan meterse nuevos datos en el maestro.
+
+<div align="center">
+    <img src="https://github.com/naujgs/SWAP1516/blob/master/Practica5/img/demonio_mysql_desbloqueo_tablas.png">
+    <p> Desbloqueo de tablas equipo <i>maestro</i></p>
+</div>
+
+Ahora, podemos hacer pruebas en el maestro y deberían replicarse en el esclavo automáticamente.

@@ -171,6 +171,9 @@ Le indicamos el archivo de registro binario.El registro binario contiene toda la
 
 Tras realizar estas configuraciones, guardamos el fichero y reiniciamos el servicio, con uno de los dos comandos siguientes:
 ```sh
-sudo service mysql restart
-/etc/init.d/mysql restart
+ sudo service mysql restart
+ /etc/init.d/mysql restart
 ```
+Si no nos ha dado ningún error la configuración del maestro, podemos pasar a hacer la configuración del *mysql* del esclavo. Para ello editaremos como *root* el fichero **/etc/mysql/my.conf**
+
+La configuración es similar a la del maestro, con la diferencia del *Paso 2 (server-id)* que en este caso es **2**

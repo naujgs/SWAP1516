@@ -184,3 +184,39 @@ Tras realizar los cambios en la configuración reiniciamos el servicio y si no n
     <img src="https://github.com/naujgs/SWAP1516/blob/master/Practica5/img/reinicio_mysql_slave_after_conf.png">
     <p> Reinicio del servicio <i>MySQL</i> tras realizar cambios en configuracion</p>
 </div>
+
+Volvemos al equipo *maestro*, donde creamos un usuario y le damos permisos de acceso a la replicación.
+
+<div align="center">
+    <img src="https://github.com/naujgs/SWAP1516/blob/master/Practica5/img/demonio_mysql_conf_master.png">
+    <p> Creación de usuario en BD del equipo maestro<i>maestro</i>, con permisos de acceso a la replicación</p>
+</div>
+
+Para finalizar la configuracion en el *maestro*, obtenemos los datos de la base de datos que vamos a replicar. Para posteriormente usarlos en la configuración del equipo *esclavo*.
+
+<div align="center">
+    <img src="https://github.com/naujgs/SWAP1516/blob/master/Practica5/img/demonio_mysql_datos_master.png">
+    <p> Reinicio del servicio <i>MySQL</i> tras realizar cambios en configuracion</p>
+</div>
+
+Ahora nos vamos a la maquina *esclava*, entramos en el *mysql* y le damos los datos del *maestro*. Para versiones anteriores de **mysql5.5** los datos los podemos introducir directamente en el archivo de configuración. En nuestro caso los introduciremos en el entorno de *mysql*. *(Debemos tener mucho cuidado con la IP, "master_log_file" y el "master_log_pos" del maestro)*
+```sh
+mysql> CHANGE MASTER TO MASTER_HOST='192.168.31.200',
+MASTER_USER='esclavo', MASTER_PASSWORD='esclavo',
+MASTER_LOG_FILE='bin.000003', MASTER_LOG_POS=501,
+MASTER_PORT=3306;
+```
+
+Los datos que ponemos en *MASTER_LOG_FILE* y en *MASTER_LOG_POS* son los que obtuvimos del *maestro* con la orden ```SHOW MASTER STATUS```
+
+<div align="center">
+    <img src="https://github.com/naujgs/SWAP1516/blob/master/Practica5/img/demonio_mysql_conf_slave.png">
+    <p> Configuracion de BD en equipo esclavo</p>
+</div>
+
+Por ultimo arrancamos el *esclavo*, para que los demonios de *MySQL* de ambas maquinas repliquen automaticamente los datos que se introduzcan/modifiquen/borren en el servidor maestro:
+
+<div align="center">
+    <img src="https://github.com/naujgs/SWAP1516/blob/master/Practica5/img/demonio_mysql_inicio_slave.png">
+    <p> Inicialización del esclavo</p>
+</div>

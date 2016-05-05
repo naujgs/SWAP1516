@@ -207,7 +207,7 @@ MASTER_LOG_FILE='bin.000003', MASTER_LOG_POS=501,
 MASTER_PORT=3306;
 ```
 
-Los datos que ponemos en *MASTER_LOG_FILE* y en *MASTER_LOG_POS* son los que obtuvimos del *maestro* con la orden ```SHOW MASTER STATUS```
+La ip que ponemos en *MASTER_HOST*  es la ip del equipo *maestro*. Los datos que ponemos en *MASTER_LOG_FILE* y en *MASTER_LOG_POS* son los que obtuvimos del *maestro* con la orden ```SHOW MASTER STATUS```
 
 <div align="center">
     <img src="https://github.com/naujgs/SWAP1516/blob/master/Practica5/img/demonio_mysql_conf_slave.png">
@@ -229,4 +229,21 @@ Para finalizar, volvemos al equipo *maestro* y volvemos a activar las tablas par
     <p> Desbloqueo de tablas equipo <i>maestro</i></p>
 </div>
 
-Ahora, podemos hacer pruebas en el maestro y deberían replicarse en el esclavo automáticamente.
+Ahora, para asegurarnos de que todo funciona perfectamente y que el esclavo no tiene ningun problema para replicar la información, ejecutamos el siguiente comando en el equipo *esclavo*
+```sh
+mysql> SHOW SLAVE STATUS\G
+```
+
+Si el valor de **Second_Behind_Master** es distinto de **null**, todo estara correcto
+
+<div align="center">
+    <img src="https://github.com/naujgs/SWAP1516/blob/master/Practica5/img/demonio_mysql_estado_slave.png">
+    <p> Estado de base de datos <i>esclava</i></p>
+</div>
+
+Para comprobar que todo esta bien nos iremos al equipo *maestro* insertaremos un nuevo dato en la base de datos y comprobaremos que se inserta automaticamente en la base de datos del equipo *esclavo*
+
+<div align="center">
+    <img src="https://github.com/naujgs/SWAP1516/blob/master/Practica5/img/demonio_mysql_comprobar_funcionamiento.png">
+    <p> Comprobacion de funcionamiento del demonio</p>
+</div>

@@ -133,6 +133,7 @@ Para ello realizaremos una serie de configuraciones tanto en el servidor princip
 Lo primero que haremos, sera configurar el *MySQL* del equipo maestro. Para ello editaremos como *root* el fichero **/etc/mysql/my.cnf**
 
 **Paso 1**
+
 Comentamos el parametro **bind-address**. Este sirve para que escuche a un servidor.
 
 <div align="center">

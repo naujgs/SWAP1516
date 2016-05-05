@@ -129,3 +129,7 @@ Por ello *MySQL* nos ofrece la opción de configurar el demonio para hacer repli
 Para ello realizaremos una serie de configuraciones tanto en el servidor principal como en el secundario.
 
 >Un requisito para empezar, es que ambas maquinas tengan clonadas las base de datos. Esto ya lo tenemos, pues lo hemos hecho en el apartado anterior.
+
+Lo primero que haremos, sera configurar el *MySQL* del equipo maestro. Para ello editaremos como *root* el fichero **/etc/mysql/my.cnf**
+
+######Paso 1

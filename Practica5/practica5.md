@@ -169,4 +169,8 @@ Le indicamos el archivo de registro binario.El registro binario contiene toda la
 </div>
 
 
-Tras realizar estas configuraciones, guardamos el fichero y reiniciamos el servicio (```sudo service mysql restart```)
+Tras realizar estas configuraciones, guardamos el fichero y reiniciamos el servicio, con uno de los dos comandos siguientes:
+```sh
+sudo service mysql restart
+/etc/init.d/mysql restart
+```

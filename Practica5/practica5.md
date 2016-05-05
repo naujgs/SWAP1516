@@ -127,3 +127,5 @@ mysqldump ejemplodb -u root -p | ssh equipoDestino mysql
 La opcion anterior es tan valida como cualquier otra y funciona perfectamente. Pero es demasiado *manual*.
 Por ello *MySQL* nos ofrece la opción de configurar el demonio para hacer replicación de las *BD* sobre un esclavo a partir de los datos que almacena el maestro. Esto transforma el proceso manual realizado en el punto anterior, en un proceso completamente automatico.
 Para ello realizaremos una serie de configuraciones tanto en el servidor principal como en el secundario.
+
+>Un requisito para empezar, es que ambas maquinas tengan clonadas las base de datos. Esto ya lo tenemos, pues lo hemos hecho en el apartado anterior.

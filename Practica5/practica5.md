@@ -132,11 +132,41 @@ Para ello realizaremos una serie de configuraciones tanto en el servidor princip
 
 Lo primero que haremos, sera configurar el *MySQL* del equipo maestro. Para ello editaremos como *root* el fichero **/etc/mysql/my.cnf**
 
-**Paso 1**
+* **Paso 1**
 
 Comentamos el parametro **bind-address**. Este sirve para que escuche a un servidor.
 
 <div align="center">
-    <img src="https://github.com/naujgs/SWAP1516/blob/master/Practica5/img/conf_mysql_master.png">
+    <img src="https://github.com/naujgs/SWAP1516/blob/master/Practica5/img/conf_mysql_master_bindAddress.png">
     <p> Configurado <i>MySQL</i> equipo maestro</p>
 </div>
+
+* **Paso 2**
+
+Le indicamos el archivo donde almacenar el log de errores. De esta forma, si por ejemplo al reiniciar el servicio cometemos algún error en el archivo de configuración, en el archivo de log nos mostrará con detalle lo sucedido.
+
+<div align="center">
+    <img src="https://github.com/naujgs/SWAP1516/blob/master/Practica5/img/conf_mysql_master_logError.png">
+    <p> Configurado <i>MySQL</i> equipo maestro</p>
+</div>
+
+* **Paso 3**
+
+Establecemos el identificador del servidores
+
+<div align="center">
+    <img src="https://github.com/naujgs/SWAP1516/blob/master/Practica5/img/conf_mysql_master_serverId.png">
+    <p> Configurado <i>MySQL</i> equipo maestro</p>
+</div>
+
+* **Paso 4**
+
+Le indicamos el archivo de registro binario.El registro binario contiene toda la información que está disponible en el registro de actualizaciones, en un formato más eficiente y de una manera que es segura para las transacciones.
+
+<div align="center">
+    <img src="https://github.com/naujgs/SWAP1516/blob/master/Practica5/img/conf_mysql_master_logBin.png">
+    <p> Configurado <i>MySQL</i> equipo maestro</p>
+</div>
+
+
+Tras realizar estas configuraciones, guardamos el fichero y reiniciamos el servicio (```sudo service mysql restart```)

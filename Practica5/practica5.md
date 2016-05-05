@@ -132,4 +132,4 @@ Para ello realizaremos una serie de configuraciones tanto en el servidor princip
 
 Lo primero que haremos, sera configurar el *MySQL* del equipo maestro. Para ello editaremos como *root* el fichero **/etc/mysql/my.cnf**
 
-__**Paso 1**__
+__Paso 1__

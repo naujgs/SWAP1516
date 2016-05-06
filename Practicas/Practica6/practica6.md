@@ -106,3 +106,23 @@ UUID=ccbbbbcc-dddd-eeee-ffff-aaabbbcccddd /dat ext2 defaults 0 0
     <img  src="https://github.com/naujgs/SWAP1516/blob/master/Practicas/Practica6/img/raid1_conf_arranq.png">
     <p>Insercion <i>RAID1</i> para montaje de este al arranque del sistema</p>
 </div>
+
+Ya esta todo configurado y listo para que funcione nuestro sistema *RAID1*. Ahora lo que haremos sera reiniciar nuestra maquina y realizaremos pruebas de fayos de disco en el *RAID*
+
+###2º Pruebas de fayo en discos del sistema *RAID*
+
+Finalmente, una vez que esté funcionando el dispositivo RAID, podemos simular un fallo en uno de los discos:
+```sh
+sudo mdadm --manage --set-faulty /dev/md0 /dev/sdb
+```
+
+También podemos retirar *“en caliente”* el disco que está marcado como que ha fallado:
+```sh
+sudo mdadm --manage --remove /dev/md0 /dev/sdb
+```
+
+Y por último, podemos añadir, también *“en caliente”*, un nuevo disco que vendría a reemplazar al disco que hemos retirado:
+```sh
+sudo mdadm --manage --add /dev/md0 /dev/sdb
+```
+En todo momento podemos obtener información detallada del estado del RAID y de los discos que lo componen.

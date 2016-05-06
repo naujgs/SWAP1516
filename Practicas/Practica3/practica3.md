@@ -11,7 +11,7 @@ sudo apt-key add /tmp/nginx_signing.key
 rm -f /tmp/nginx_signing.key
 ```
   <p align="center">
-  <img src="https://github.com/naujgs/SWAP1516/blob/master/Practica3/img/nginx_import_llave.jpg">
+  <img src="https://github.com/naujgs/SWAP1516/blob/master/Practicas/Practica3/img/nginx_import_llave.jpg">
   </p>
 
 Ahora, añadimos el repositorio al fichero *```/etc/apt/source.list```*. Para ello nos logueamos como root(```sudo su```) y ejecutaremos los siguientes comandos:
@@ -20,7 +20,7 @@ echo "deb http://nginx.org/packages/ubuntu/ lucid nginx" >> /etc/apt/sources.lis
 echo "deb-src http://nginx.org/packages/ubuntu/ lucid nginx" >> /etc/apt/sources.list
 ```
 <p align="center">
-<img src="https://github.com/naujgs/SWAP1516/blob/master/Practica3/img/nginx_add_repos.jpg">
+<img src="https://github.com/naujgs/SWAP1516/blob/master/Practicas/Practica3/img/nginx_add_repos.jpg">
 </p>
 
 Por ultimo procederemos a la instalacion del paquete *nginx*:
@@ -37,7 +37,7 @@ La configuracion de *nginx* no nos vale tal cual está. Ya que corresponde a una
 Yo lo que hare sera cambiar el nombre del fichero por *bk_default.conf*. Esto lo hare con el comando ```mv default.conf bk_default.conf```
 
 <p align="center">
-<img src="https://github.com/naujgs/SWAP1516/blob/master/Practica3/img/nginx_cambiar_nom_fich_conf.jpg">
+<img src="https://github.com/naujgs/SWAP1516/blob/master/Practicas/Practica3/img/nginx_cambiar_nom_fich_conf.jpg">
 </p>
 
 Una vez echo esto, creamos un nuevo fichero que se llamara *default.conf* y que contendra nuestra configuracion para que nginx funcione como balanceador.
@@ -75,7 +75,7 @@ server{
 }
 ```
 <p align="center">
-<img src="https://github.com/naujgs/SWAP1516/blob/master/Practica3/img/nginx_conf.jpg">
+<img src="https://github.com/naujgs/SWAP1516/blob/master/Practicas/Practica3/img/nginx_conf.jpg">
 </p>
 
 El metodo de balanceo es *round-robin*, con la misma prioridad para todos los servidores.
@@ -96,7 +96,7 @@ Entraremos en el directorio web de cada maquina y modificaremos las webs que sir
 Por ultimo, abriremos una terminal en nuestra maquina anfitriona, y escribiremos el comando ```curl http://<ip_balanceador>```. Este comando nos mostrara en el terminal el codigo de la pagina web.
 
 <p align="center">
-<img src="https://github.com/naujgs/SWAP1516/blob/master/Practica3/img/nginx_prueba_balanceo.jpg">
+<img src="https://github.com/naujgs/SWAP1516/blob/master/Practicas/Practica3/img/nginx_prueba_balanceo.jpg">
 </p>
 
 En la imagen superior vemos como el balanceador nos da las webs de ambas maquinas.
@@ -107,7 +107,7 @@ En la imagen superior vemos como el balanceador nos da las webs de ambas maquina
 Para evitarnos cualquier tipo de problema, lo primero que haremos sera parar el servicio de nginx
 
 <p align="center">
-<img src="https://github.com/naujgs/SWAP1516/blob/master/Practica3/img/nginx_parada_servicio.jpg">
+<img src="https://github.com/naujgs/SWAP1516/blob/master/Practicas/Practica3/img/nginx_parada_servicio.jpg">
 </p>
 ***
 
@@ -117,7 +117,7 @@ apt-get install haproxy
 ```
 
 <p align="center">
-<img src="https://github.com/naujgs/SWAP1516/blob/master/Practica3/img/haproxy_instalar.jpg">
+<img src="https://github.com/naujgs/SWAP1516/blob/master/Practicas/Practica3/img/haproxy_instalar.jpg">
 </p>
 
 ## 5º Configurado de *haproxy* como balanceador de carga
@@ -127,13 +127,13 @@ Para configurar *haproxy* trabajaremos con el fichero ```/etc/haproxy/haproxy.cf
 En mi caso lo que hare sera renombrar dicho fichero de configuracion y crear uno en su lugar con el mismo nombre, en el que escribire la configuracion necesaria para que el *haproxy* trabaje como balanceador de carga.
 
 <p align="center">
-<img src="https://github.com/naujgs/SWAP1516/blob/master/Practica3/img/haproxy_renombrar.jpg">
+<img src="https://github.com/naujgs/SWAP1516/blob/master/Practicas/Practica3/img/haproxy_renombrar.jpg">
 </p>
 
 Un balanceador sencillo debe escuchar el trafico en el puerto 80 y redirigirlo a alguna de las maquinas servidoras finales (debe conocer sus IP). Por lo que usaremos como configuracion inicial la siguiente:
 
 <p align="center">
-<img src="https://github.com/naujgs/SWAP1516/blob/master/Practica3/img/haproxy_configuracion.jpg">
+<img src="https://github.com/naujgs/SWAP1516/blob/master/Practicas/Practica3/img/haproxy_configuracion.jpg">
 </p>
 
 Como vemos, nuestro balanceador espera las peticiones por el puerto 80. Y las redigira a las dos maquinas servidoras, que tienen apache instalado y estan escuchando por el puerto 80.
@@ -149,12 +149,12 @@ Una vez guardada la configuracion de *haproxy*, lanzaremos el servicio con el co
 Tras ejecutar el comando, si nos sale ningun mensaje o aviso, todo ha ido bien.
 
 <p align="center">
-<img src="https://github.com/naujgs/SWAP1516/blob/master/Practica3/img/haproxy_reinicio.jpg">
+<img src="https://github.com/naujgs/SWAP1516/blob/master/Practicas/Practica3/img/haproxy_reinicio.jpg">
 </p>
 
 Por lo que podemos empezar a hacer peticiones a la IP del balanceador.
 Para comprobar que todo ha ido bien, actuaremos la igual forma que con *nginx*
 
 <p align="center">
-<img src="https://github.com/naujgs/SWAP1516/blob/master/Practica3/img/haproxy_prueba_balanceo.jpg">
+<img src="https://github.com/naujgs/SWAP1516/blob/master/Practicas/Practica3/img/haproxy_prueba_balanceo.jpg">
 </p>

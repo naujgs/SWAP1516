@@ -77,3 +77,20 @@ Podemos comprobar que el proceso se ha realizado adecuadamente, y también los p
     <img  src="https://github.com/naujgs/SWAP1516/blob/master/Practicas/Practica6/img/raid1_dir_comprob.png">
     <p>Comprobamos el exito al montar <i>RAID1</i></p>
 </div>
+
+Para comprobar el estado del RAID, ejecutaremos el comando ```sudo mdadm --detail /dev/md0```
+
+<div align="center">
+    <img  src="https://github.com/naujgs/SWAP1516/blob/master/Practicas/Practica6/img/raid1_state.png">
+    <p>Comprobamos el estado del <i>RAID1</i></p>
+</div>
+
+Para finalizar el proceso, conviene configurar el sistema para que monte el dispositivo *RAID* creado al arrancar el sistema. Para ello debemos editar el archivo **/etc/fstab** y añadir la línea correspondiente para montar automáticamente dicho dispositivo. Conviene utilizar el identificador único de cada dispositivo de almacenamiento en lugar
+de simplemente el nombre del dispositivo (aunque ambas opciones son válidas).
+
+Para obtener los UUID de todos los dispositivos de almacenamiento que tenemos, debemos ejecutar el comando ```ls -l /dev/disk/by-uuid/```
+
+<div align="center">
+    <img  src="https://github.com/naujgs/SWAP1516/blob/master/Practicas/Practica6/img/raid1_info_hardDisk.png">
+    <p>Información sobre los dispositivos de almacenamiento</p>
+</div>

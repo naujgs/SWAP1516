@@ -127,8 +127,8 @@ mysqldump ejemplodb -u root -p | ssh equipoDestino mysql
 
 ###3º Replicación de una Base de Datos mediante una configuración *maestro-esclavo*
 
-La opcion anterior es tan valida como cualquier otra y funciona perfectamente. Pero es demasiado *manual*.
-Por ello *MySQL* nos ofrece la opción de configurar el demonio para hacer replicación de las *BD* sobre un esclavo a partir de los datos que almacena el maestro. Esto transforma el proceso manual realizado en el punto anterior, en un proceso completamente automatico.
+La opción anterior es tan valida como cualquier otra y funciona perfectamente. Pero es demasiado *manual*.
+Por ello *MySQL* nos ofrece la opción de configurar el demonio para hacer replicación de las *BD* sobre un esclavo a partir de los datos que almacena el maestro. Esto transforma el proceso manual realizado en el punto anterior, en un proceso completamente automático.
 Para ello realizaremos una serie de configuraciones tanto en el servidor principal como en el secundario.
 
 >Un requisito para empezar, es que ambas maquinas tengan clonadas las base de datos. Esto ya lo tenemos, pues lo hemos hecho en el apartado anterior.
@@ -137,7 +137,7 @@ Lo primero que haremos, sera configurar el *MySQL* del equipo maestro. Para ello
 
 * **Paso 1**
 
-Comentamos el parametro **bind-address**. Este sirve para que escuche a un servidor.
+Comentamos el parámetro **bind-address**. Este sirve para que escuche a un servidor.
 
 <div align="center">
     <img src="https://github.com/naujgs/SWAP1516/blob/master/Practica5/img/conf_mysql_master_bindAddress.png">
@@ -164,7 +164,7 @@ Establecemos el identificador del servidores
 
 * **Paso 4**
 
-Le indicamos el archivo de registro binario.El registro binario contiene toda la información que está disponible en el registro de actualizaciones, en un formato más eficiente y de una manera que es segura para las transacciones.
+Le indicamos el archivo de registro binario. El registro binario contiene toda la información que está disponible en el registro de actualizaciones, en un formato más eficiente y de una manera que es segura para las transacciones.
 
 <div align="center">
     <img src="https://github.com/naujgs/SWAP1516/blob/master/Practica5/img/conf_mysql_master_logBin.png">
@@ -181,11 +181,11 @@ Si no nos ha dado ningún error la configuración del maestro, podemos pasar a h
 
 La configuración es similar a la del maestro, con la diferencia del *Paso 2 (server-id)* que en este caso es **2**
 
-Tras realizar los cambios en la configuración reiniciamos el servicio y si no nos da ningun error es que hemos tenido exito en la configuración.
+Tras realizar los cambios en la configuración reiniciamos el servicio y si no nos da ningún error es que hemos tenido éxito en la configuración.
 
 <div align="center">
     <img src="https://github.com/naujgs/SWAP1516/blob/master/Practica5/img/reinicio_mysql_slave_after_conf.png">
-    <p> Reinicio del servicio <i>MySQL</i> tras realizar cambios en configuracion</p>
+    <p> Reinicio del servicio <i>MySQL</i> tras realizar cambios en configuración</p>
 </div>
 
 Volvemos al equipo *maestro*, donde creamos un usuario y le damos permisos de acceso a la replicación.
@@ -195,11 +195,11 @@ Volvemos al equipo *maestro*, donde creamos un usuario y le damos permisos de ac
     <p> Creación de usuario en BD del equipo maestro<i>maestro</i>, con permisos de acceso a la replicación</p>
 </div>
 
-Para finalizar la configuracion en el *maestro*, obtenemos los datos de la base de datos que vamos a replicar. Para posteriormente usarlos en la configuración del equipo *esclavo*.
+Para finalizar la configuración en el *maestro*, obtenemos los datos de la base de datos que vamos a replicar. Para posteriormente usarlos en la configuración del equipo *esclavo*.
 
 <div align="center">
     <img src="https://github.com/naujgs/SWAP1516/blob/master/Practica5/img/demonio_mysql_datos_master.png">
-    <p> Reinicio del servicio <i>MySQL</i> tras realizar cambios en configuracion</p>
+    <p> Reinicio del servicio <i>MySQL</i> tras realizar cambios en configuración</p>
 </div>
 
 Ahora nos vamos a la maquina *esclava*, entramos en el *mysql* y le damos los datos del *maestro*. Para versiones anteriores de **mysql5.5** los datos los podemos introducir directamente en el archivo de configuración. En nuestro caso los introduciremos en el entorno de *mysql*. *(Debemos tener mucho cuidado con la IP, "master_log_file" y el "master_log_pos" del maestro)*
@@ -214,10 +214,10 @@ La ip que ponemos en *MASTER_HOST*  es la ip del equipo *maestro*. Los datos que
 
 <div align="center">
     <img src="https://github.com/naujgs/SWAP1516/blob/master/Practica5/img/demonio_mysql_conf_slave.png">
-    <p> Configuracion de BD en equipo esclavo</p>
+    <p> Configuración de BD en equipo esclavo</p>
 </div>
 
-Por ultimo arrancamos el *esclavo*, para que los demonios de *MySQL* de ambas maquinas repliquen automaticamente los datos que se introduzcan/modifiquen/borren en el servidor maestro:
+Por ultimo arrancamos el *esclavo*, para que los demonios de *MySQL* de ambas maquinas repliquen automáticamente los datos que se introduzcan/modifiquen/borren en el servidor maestro:
 
 <div align="center">
     <img src="https://github.com/naujgs/SWAP1516/blob/master/Practica5/img/demonio_mysql_inicio_slave.png">
@@ -232,24 +232,23 @@ Para finalizar, volvemos al equipo *maestro* y volvemos a activar las tablas par
     <p> Desbloqueo de tablas equipo <i>maestro</i></p>
 </div>
 
-Ahora, para asegurarnos de que todo funciona perfectamente y que el esclavo no tiene ningun problema para replicar la información, ejecutamos el siguiente comando en el equipo *esclavo*
+Ahora, para asegurarnos de que todo funciona perfectamente y que el esclavo no tiene ningún problema para replicar la información, ejecutamos el siguiente comando en el equipo *esclavo*
 ```sh
 mysql> SHOW SLAVE STATUS\G
 ```
 
-Si el valor de **Second_Behind_Master** es distinto de **null**, todo estara correcto
+Si el valor de **Second_Behind_Master** es distinto de **null**, todo estará correcto
 
 <div align="center">
     <img src="https://github.com/naujgs/SWAP1516/blob/master/Practica5/img/demonio_mysql_estado_slave.png">
     <p> Estado de base de datos <i>esclava</i></p>
 </div>
 
-Para comprobar que todo esta bien nos iremos al equipo *maestro* insertaremos un nuevo dato en la base de datos y comprobaremos que se inserta automaticamente en la base de datos del equipo *esclavo*
+Para comprobar que todo esta bien nos iremos al equipo *maestro* insertaremos un nuevo dato en la base de datos y comprobaremos que se inserta automáticamente en la base de datos del equipo *esclavo*
 
 <div align="center">
     <img src="https://github.com/naujgs/SWAP1516/blob/master/Practica5/img/demonio_mysql_comprobar_funcionamiento.png">
-    <p> Comprobacion de funcionamiento del demonio</p>
+    <p> Comprobación de funcionamiento del demonio</p>
 </div>
-
 
 A la izquierda tenemos la terminal del equipo *maestro* y a la derecha la del equipo *esclavo*

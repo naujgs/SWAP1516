@@ -109,6 +109,12 @@ UUID=ccbbbbcc-dddd-eeee-ffff-aaabbbcccddd /dat ext2 defaults 0 0
 
 Ya esta todo configurado y listo para que funcione nuestro sistema *RAID1*. Ahora lo que haremos sera reiniciar nuestra maquina y realizaremos pruebas de fayos de disco en el *RAID*
 
+>Tras reiniciar nuestra maquina, volvemos a ejecutar el comando ```sudo mount```. Vemos como el sistema le a cambiado el nombre a nuestra unidad *RAID1*
+<div align="center">
+    <img  src="https://github.com/naujgs/SWAP1516/blob/master/Practicas/Practica6/img/raid1_dir_comprob_post_reBoot.png">
+    <p>Comprobamos el exito al montar <i>RAID1</i> tras reinicio sistema</p>
+</div>
+
 ###2º Pruebas de fayo en discos del sistema *RAID*
 
 Finalmente, una vez que esté funcionando el dispositivo RAID, podemos simular un fallo en uno de los discos:

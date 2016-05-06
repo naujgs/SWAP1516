@@ -103,7 +103,8 @@ Es importante destacar que el archivo *.SQL* de copia de seguridad tiene formato
     <img src="https://github.com/naujgs/SWAP1516/blob/master/Practica5/img/mysqldump_crear_bd_remota.png">
     <p> Creo la base de datos en el equipo remoto</p>
 </div>
->Aunque en la imagen vemos que la base de datos que creamos se llama *ejemplodb* en realidad la llamamos igual que en el equipo maestro *contactos*.\n
+>Aunque en la imagen vemos que la base de datos que creamos se llama *ejemplodb* en realidad la llamamos igual que en el equipo maestro *contactos*.
+
 >De esta forma evitamos problemas posteriormente
 
 <div align="center">

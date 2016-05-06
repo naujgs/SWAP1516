@@ -10,7 +10,7 @@ Como se ha indicado, partimos de una máquina virtual ya instalada y configurada
 Primero nos vamos a la configuracion de la maquina virtual.
 
 <div align="center">
-    <img width="400px" src="https://github.com/naujgs/SWAP1516/blob/master/Practicas/Practica6/img/add_hardDisk1.png">
+    <img width="500px" src="https://github.com/naujgs/SWAP1516/blob/master/Practicas/Practica6/img/add_hardDisk1.png">
     <p> Creación de disco duro</p>
 </div>
 
@@ -27,7 +27,7 @@ Como tenemos que crear dos discos duros virtuales iguales, repetiremos el mismo 
 Tras haber creado los dos discos duros virtuales, el panel de configuración quedaria de la siguiente forma:
 
 <div align="center">
-    <img width="400px" src="https://github.com/naujgs/SWAP1516/blob/master/Practicas/Practica6/img/add_hardDisk.png">
+    <img width="500px" src="https://github.com/naujgs/SWAP1516/blob/master/Practicas/Practica6/img/add_hardDisk.png">
     <p> Panel configuración con discos duros virtales para el <i>RAID</i></p>
 </div>
 

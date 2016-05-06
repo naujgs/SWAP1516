@@ -27,6 +27,6 @@ Como tenemos que crear dos discos duros virtuales iguales, repetiremos el mismo 
 Tras haber creado los dos discos duros virtuales, el panel de configuración quedaria de la siguiente forma:
 
 <div align="center">
-    <img src="https://github.com/naujgs/SWAP1516/blob/master/Practicas/Practica6/img/add_hardDisk.png">
+    <img width=150px src="https://github.com/naujgs/SWAP1516/blob/master/Practicas/Practica6/img/add_hardDisk.png">
     <p> Panel configuración con discos duros virtales para el <i>RAID</i></p>
 </div>

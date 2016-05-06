@@ -17,7 +17,7 @@ Primero nos vamos a la configuracion de la maquina virtual.
 En la ventana de ajustes que se nos habre, presionamos el boton *+Add...*
 
 <div align="center">
-    <img src="https://github.com/naujgs/SWAP1516/blob/master/Practicas/Practica6/img/add_hardDisk2.png">
+    <img width="500px" src="https://github.com/naujgs/SWAP1516/blob/master/Practicas/Practica6/img/add_hardDisk2.png">
     <p> Creación de disco duro</p>
 </div>
 
@@ -38,3 +38,10 @@ sudo apt-get install mdadm
 ```
 
 >Si durante el proceso de insalacion pregunta si deseas intalar *Postfix*, elegimos la opcion *Sin configurar*
+
+Ahora buscamos la información de los dos con el comando ```sudo fdisk -l```
+
+<div align="center">
+    <img  src="https://github.com/naujgs/SWAP1516/blob/master/Practicas/Practica6/img/hardDisk_info.png">
+    <p>Informacion de los discos duros que detecta el sistema</p>
+</div>

@@ -14,7 +14,7 @@ Crearemos una base de datos en MySQL e insertaremos algunos datos. De esta forma
 En todo momento usaremos la interfaz de linea de comandos del MySQL.
 
 <div align="center">
-    <img src="https://github.com/naujgs/SWAP1516/blob/master/Practica5/img/bd_crear.png">
+    <img src="https://github.com/naujgs/SWAP1516/blob/master/Practicas/Practica5/img/bd_crear.png">
     <p> Creación de base de datos e inserción de datos</p>
 </div>
 
@@ -44,28 +44,28 @@ mysqldump <base_datos> -u root -p > <path_destino_copia>
 Esto puede ser suficiente, pero tenemos que tener en cuenta que los datos pueden estar actualizándose constantemente en el servidor de BD principal. Por lo que, antes de hacer la copia de seguridad en el archivo *.SQL* debemos evitar que se acceda a la BD para cambiar nada.
 
 <div align="center">
-    <img src="https://github.com/naujgs/SWAP1516/blob/master/Practica5/img/bd_bloquear.png">
+    <img src="https://github.com/naujgs/SWAP1516/blob/master/Practicas/Practica5/img/bd_bloquear.png">
     <p> Bloqueo actualización base de datos</p>
 </div>
 
 Ahora procederemos a crear una copia local de nuestra base de datos. Para ello, primero nos loguearemos como *root*
 
 <div align="center">
-    <img src="https://github.com/naujgs/SWAP1516/blob/master/Practica5/img/mysqldump_local.png">
+    <img src="https://github.com/naujgs/SWAP1516/blob/master/Practicas/Practica5/img/mysqldump_local.png">
     <p> Ejecución de <i>mysqldump</i></p>
 </div>
 
 A continuación comprobamos que se haya creado la copia de la base de datos en el directorio especificado
 
 <div align="center">
-    <img src="https://github.com/naujgs/SWAP1516/blob/master/Practica5/img/mysqldump_local_comprobacion.png">
+    <img src="https://github.com/naujgs/SWAP1516/blob/master/Practicas/Practica5/img/mysqldump_local_comprobacion.png">
     <p> Comprobación creación copia BD <i>mysqldump</i></p>
 </div>
 
 Una vez ya hemos creado nuestra copia, procedemos a desbloquear las tablas:
 
 <div align="center">
-    <img src="https://github.com/naujgs/SWAP1516/blob/master/Practica5/img/bd_desbloquear.png">
+    <img src="https://github.com/naujgs/SWAP1516/blob/master/Practicas/Practica5/img/bd_desbloquear.png">
     <p> Desbloqueo actualización base de datos</p>
 </div>
 
@@ -83,7 +83,7 @@ scp [[user@]host1:]file1 ... [[user@]host2:]file2
 En la siguiente imagen podemos ver un ejemplo de ejecución. Primero ejecutando el comando desde la maquina *maestro* y luego desde la maquina *esclavo*
 
 <div align="center">
-    <img src="https://github.com/naujgs/SWAP1516/blob/master/Practica5/img/scp_demostracion.png">
+    <img src="https://github.com/naujgs/SWAP1516/blob/master/Practicas/Practica5/img/scp_demostracion.png">
     <p> Envío copia base de datos con herramienta SCP</p>
 </div>
 
@@ -92,7 +92,7 @@ Pero si nos fijamos, la copia de la base de datos la hice en el directorio */roo
 En ese caso, la solución seria enviar la copia a cualquier directorio del equipo remoto y después conectarnos por ssh y así colocarlo en el directorio idóneo.
 
 <div align="center">
-    <img src="https://github.com/naujgs/SWAP1516/blob/master/Practica5/img/scp_ejecucion.png">
+    <img src="https://github.com/naujgs/SWAP1516/blob/master/Practicas/Practica5/img/scp_ejecucion.png">
     <p> Envío copia base datos | Reubicación son ssh</p>
 </div>
 
@@ -100,7 +100,7 @@ Ya hemos realizado la copia.
 Es importante destacar que el archivo *.SQL* de copia de seguridad tiene formato de texto plano, e incluye las sentencias SQL para restaurar los datos contenidos en la BD en otra máquina. Sin embargo, la orden *mysqldump* no incluye en ese archivo la sentencia para crear la BD. Por lo que nosotros tendremos que crear primero la BD y después restaurarla.
 
 <div align="center">
-    <img src="https://github.com/naujgs/SWAP1516/blob/master/Practica5/img/mysqldump_crear_bd_remota.png">
+    <img src="https://github.com/naujgs/SWAP1516/blob/master/Practicas/Practica5/img/mysqldump_crear_bd_remota.png">
     <p> Creo la base de datos en el equipo remoto</p>
 </div>
 >Aunque en la imagen vemos que la base de datos que creamos se llama *ejemplodb* en realidad la llamamos igual que en el equipo maestro *contactos*.
@@ -108,14 +108,14 @@ Es importante destacar que el archivo *.SQL* de copia de seguridad tiene formato
 >De esta forma evitamos problemas posteriormente
 
 <div align="center">
-    <img src="https://github.com/naujgs/SWAP1516/blob/master/Practica5/img/bd_restauracion_bk.png">
+    <img src="https://github.com/naujgs/SWAP1516/blob/master/Practicas/Practica5/img/bd_restauracion_bk.png">
     <p> Restauración, en equipo remoto, de la base de datos con la información del equipo maestro</p>
 </div>
 
 Accederemos a la base de datos y consultaremos su contenido para comprobar que el proceso se ha realizado con éxito.
 
 <div align="center">
-    <img src="https://github.com/naujgs/SWAP1516/blob/master/Practica5/img/bd_bk_comprobacion.png">
+    <img src="https://github.com/naujgs/SWAP1516/blob/master/Practicas/Practica5/img/bd_bk_comprobacion.png">
     <p> Contenido de la base de datos en el equipo backup</p>
 </div>
 
@@ -140,7 +140,7 @@ Lo primero que haremos, sera configurar el *MySQL* del equipo maestro. Para ello
 Comentamos el parámetro **bind-address**. Este sirve para que escuche a un servidor.
 
 <div align="center">
-    <img src="https://github.com/naujgs/SWAP1516/blob/master/Practica5/img/conf_mysql_master_bindAddress.png">
+    <img src="https://github.com/naujgs/SWAP1516/blob/master/Practicas/Practica5/img/conf_mysql_master_bindAddress.png">
     <p> Configurado <i>MySQL</i> equipo maestro</p>
 </div>
 
@@ -149,7 +149,7 @@ Comentamos el parámetro **bind-address**. Este sirve para que escuche a un serv
 Le indicamos el archivo donde almacenar el log de errores. De esta forma, si por ejemplo al reiniciar el servicio cometemos algún error en el archivo de configuración, en el archivo de log nos mostrará con detalle lo sucedido.
 
 <div align="center">
-    <img src="https://github.com/naujgs/SWAP1516/blob/master/Practica5/img/conf_mysql_master_logError.png">
+    <img src="https://github.com/naujgs/SWAP1516/blob/master/Practicas/Practica5/img/conf_mysql_master_logError.png">
     <p> Configurado <i>MySQL</i> equipo maestro</p>
 </div>
 
@@ -158,7 +158,7 @@ Le indicamos el archivo donde almacenar el log de errores. De esta forma, si por
 Establecemos el identificador del servidores
 
 <div align="center">
-    <img src="https://github.com/naujgs/SWAP1516/blob/master/Practica5/img/conf_mysql_master_serverId.png">
+    <img src="https://github.com/naujgs/SWAP1516/blob/master/Practicas/Practica5/img/conf_mysql_master_serverId.png">
     <p> Configurado <i>MySQL</i> equipo maestro</p>
 </div>
 
@@ -167,7 +167,7 @@ Establecemos el identificador del servidores
 Le indicamos el archivo de registro binario. El registro binario contiene toda la información que está disponible en el registro de actualizaciones, en un formato más eficiente y de una manera que es segura para las transacciones.
 
 <div align="center">
-    <img src="https://github.com/naujgs/SWAP1516/blob/master/Practica5/img/conf_mysql_master_logBin.png">
+    <img src="https://github.com/naujgs/SWAP1516/blob/master/Practicas/Practica5/img/conf_mysql_master_logBin.png">
     <p> Configurado <i>MySQL</i> equipo maestro</p>
 </div>
 
@@ -184,21 +184,21 @@ La configuración es similar a la del maestro, con la diferencia del *Paso 2 (se
 Tras realizar los cambios en la configuración reiniciamos el servicio y si no nos da ningún error es que hemos tenido éxito en la configuración.
 
 <div align="center">
-    <img src="https://github.com/naujgs/SWAP1516/blob/master/Practica5/img/reinicio_mysql_slave_after_conf.png">
+    <img src="https://github.com/naujgs/SWAP1516/blob/master/Practicas/Practica5/img/reinicio_mysql_slave_after_conf.png">
     <p> Reinicio del servicio <i>MySQL</i> tras realizar cambios en configuración</p>
 </div>
 
 Volvemos al equipo *maestro*, donde creamos un usuario y le damos permisos de acceso a la replicación.
 
 <div align="center">
-    <img src="https://github.com/naujgs/SWAP1516/blob/master/Practica5/img/demonio_mysql_conf_master.png">
+    <img src="https://github.com/naujgs/SWAP1516/blob/master/Practicas/Practica5/img/demonio_mysql_conf_master.png">
     <p> Creación de usuario en BD del equipo maestro<i>maestro</i>, con permisos de acceso a la replicación</p>
 </div>
 
 Para finalizar la configuración en el *maestro*, obtenemos los datos de la base de datos que vamos a replicar. Para posteriormente usarlos en la configuración del equipo *esclavo*.
 
 <div align="center">
-    <img src="https://github.com/naujgs/SWAP1516/blob/master/Practica5/img/demonio_mysql_datos_master.png">
+    <img src="https://github.com/naujgs/SWAP1516/blob/master/Practicas/Practica5/img/demonio_mysql_datos_master.png">
     <p> Reinicio del servicio <i>MySQL</i> tras realizar cambios en configuración</p>
 </div>
 
@@ -213,14 +213,14 @@ MASTER_PORT=3306;
 La ip que ponemos en *MASTER_HOST*  es la ip del equipo *maestro*. Los datos que ponemos en *MASTER_LOG_FILE* y en *MASTER_LOG_POS* son los que obtuvimos del *maestro* con la orden ```SHOW MASTER STATUS```
 
 <div align="center">
-    <img src="https://github.com/naujgs/SWAP1516/blob/master/Practica5/img/demonio_mysql_conf_slave.png">
+    <img src="https://github.com/naujgs/SWAP1516/blob/master/Practicas/Practica5/img/demonio_mysql_conf_slave.png">
     <p> Configuración de BD en equipo esclavo</p>
 </div>
 
 Por ultimo arrancamos el *esclavo*, para que los demonios de *MySQL* de ambas maquinas repliquen automáticamente los datos que se introduzcan/modifiquen/borren en el servidor maestro:
 
 <div align="center">
-    <img src="https://github.com/naujgs/SWAP1516/blob/master/Practica5/img/demonio_mysql_inicio_slave.png">
+    <img src="https://github.com/naujgs/SWAP1516/blob/master/Practicas/Practica5/img/demonio_mysql_inicio_slave.png">
     <p> Inicialización del esclavo</p>
 </div>
 
@@ -228,7 +228,7 @@ Por ultimo arrancamos el *esclavo*, para que los demonios de *MySQL* de ambas ma
 Para finalizar, volvemos al equipo *maestro* y volvemos a activar las tablas para que puedan meterse nuevos datos en el maestro.
 
 <div align="center">
-    <img src="https://github.com/naujgs/SWAP1516/blob/master/Practica5/img/demonio_mysql_desbloqueo_tablas.png">
+    <img src="https://github.com/naujgs/SWAP1516/blob/master/Practicas/Practica5/img/demonio_mysql_desbloqueo_tablas.png">
     <p> Desbloqueo de tablas equipo <i>maestro</i></p>
 </div>
 
@@ -240,14 +240,14 @@ mysql> SHOW SLAVE STATUS\G
 Si el valor de **Second_Behind_Master** es distinto de **null**, todo estará correcto
 
 <div align="center">
-    <img src="https://github.com/naujgs/SWAP1516/blob/master/Practica5/img/demonio_mysql_estado_slave.png">
+    <img src="https://github.com/naujgs/SWAP1516/blob/master/Practicas/Practica5/img/demonio_mysql_estado_slave.png">
     <p> Estado de base de datos <i>esclava</i></p>
 </div>
 
 Para comprobar que todo esta bien nos iremos al equipo *maestro* insertaremos un nuevo dato en la base de datos y comprobaremos que se inserta automáticamente en la base de datos del equipo *esclavo*
 
 <div align="center">
-    <img src="https://github.com/naujgs/SWAP1516/blob/master/Practica5/img/demonio_mysql_comprobar_funcionamiento.png">
+    <img src="https://github.com/naujgs/SWAP1516/blob/master/Practicas/Practica5/img/demonio_mysql_comprobar_funcionamiento.png">
     <p> Comprobación de funcionamiento del demonio</p>
 </div>
 

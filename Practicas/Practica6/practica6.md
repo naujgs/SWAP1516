@@ -52,7 +52,28 @@ Ahora ya podemos crear el *RAID 1*. Para ello *"crearemos"* un dispositivo nuevo
 
 <div align="center">
     <img  src="https://github.com/naujgs/SWAP1516/blob/master/Practicas/Practica6/img/raid1_create.png">
-    <p>Creamos el RAID1</p>
+    <p>Creamos el <i>RAID1</i></p>
 </div>
 
 >En este punto, el dispositivo se habrá creado con el nombre /dev/md0, sin embargo, en cuanto reiniciemos la máquina, Linux lo renombrará y pasará a llamarlo /dev/md127
+
+Una vez creado el dispositivo *RAID*, y como aún no habremos reiniciado la máquina, usaremos */dev/md0* para darle formato.
+
+<div align="center">
+    <img  src="https://github.com/naujgs/SWAP1516/blob/master/Practicas/Practica6/img/raid1_formato.png">
+    <p>Damos formato al <i>RAID1</i></p>
+</div>
+
+Por defecto, *mkfs* inicializa un dispositivo de almacenamiento con formato *ext2*. Ahora ya podemos crear el directorio en el que se montará la unidad del *RAID*.
+
+<div align="center">
+    <img  src="https://github.com/naujgs/SWAP1516/blob/master/Practicas/Practica6/img/raid1_dir.png">
+    <p>Creamos el directorio donde montar <i>RAID1</i></p>
+</div>
+
+Podemos comprobar que el proceso se ha realizado adecuadamente, y también los parámetros con los que Linux ha conseguido montarlo usando la orden ```sudo mount```
+
+<div align="center">
+    <img  src="https://github.com/naujgs/SWAP1516/blob/master/Practicas/Practica6/img/raid1_dir_comprob.png">
+    <p>Comprobamos el exito al montar <i>RAID1</i></p>
+</div>

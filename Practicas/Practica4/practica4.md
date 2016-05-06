@@ -32,13 +32,13 @@ Primero lo ejecutaremos contra un servidor final, luego contra el balanceador de
 >Si durante la ejecucion del benchmark en nuestra maquina anfitriona, ejecutaremos *top* en el servidor final, veremos todos los procesos que se generan por las peticiones del benchmark.
 
 ><p align="center">
-  <img src="https://github.com/naujgs/SWAP1516/blob/master/Practica4/img/ab_top.png" width=600px>
+  <img src="https://github.com/naujgs/SWAP1516/blob/master/Practicas/Practica4/img/ab_top.png" width=600px>
   </p>
 
 Una vez finaliza la ejecucion del Apache Benchmark, nos aparecera en pantalla la informacion que este a obtenido de la ejecución
 
 <p align="center">
-  <img src="https://github.com/naujgs/SWAP1516/blob/master/Practica4/img/ab_ejecucion1.png" width=600px>
+  <img src="https://github.com/naujgs/SWAP1516/blob/master/Practicas/Practica4/img/ab_ejecucion1.png" width=600px>
   </p>
 
 En la imagen vemos la ejecucion de Apache Benchmark con un millon de peticiones de mil en mil. Pero para el desarrollo de la practica realizaremos **1000 peticiones de 100 en 100**.
@@ -84,7 +84,7 @@ Y ahora contra el balanceador de carga con *haproxy*
 Para que nos sea mas comodo visualizar los resultados, tenemos las siguientes tablas en las que comparamos la media y desviacion estantadar de los 3 datos que hemos tomado con las 3 configuraciones.
 
 <p align="center">
-  <img src="https://github.com/naujgs/SWAP1516/blob/master/Practica4/img/ab_ttfr.png">
+  <img src="https://github.com/naujgs/SWAP1516/blob/master/Practicas/Practica4/img/ab_ttfr.png">
   </p>
 
 Podemos ver como el servidor final tarda menos que el balanceador de carga en responder todas las peticiones. Esto se debe, a que el *"camino"* se se recorre a traves del balanceador de carga es mas largo.
@@ -92,7 +92,7 @@ Tambien podemos ver como *nginx* tarda menos que *haproxy*
 
 
   <p align="center">
-    <img src="https://github.com/naujgs/SWAP1516/blob/master/Practica4/img/ab_rps.png">
+    <img src="https://github.com/naujgs/SWAP1516/blob/master/Practicas/Practica4/img/ab_rps.png">
     </p>
 
 Y aqui podemos ver como el servidor final responde mas peticiones por segundo que el balanceador de carga. Algo normal, debido a que este es mas rapido como hemos visto en la grafica anterior.
@@ -155,34 +155,34 @@ La manera de proceder sera igual que con *Apache Benchmark*. Primero ejecutaremo
 Por ultimo, compararemos los datos obtenidos con las tres configuraciones mediante graficas.
 
   <div align="center">    
-    <img src="https://github.com/naujgs/SWAP1516/blob/master/Practica4/img/siege_dispo_med.png">  
+    <img src="https://github.com/naujgs/SWAP1516/blob/master/Practicas/Practica4/img/siege_dispo_med.png">  
     <p>Media</p>
   </div>
 ***
   <div align="center">    
-    <img src="https://github.com/naujgs/SWAP1516/blob/master/Practica4/img/siege_respTim_med.png">
+    <img src="https://github.com/naujgs/SWAP1516/blob/master/Practicas/Practica4/img/siege_respTim_med.png">
     <p>Media</p>    
-    <img src="https://github.com/naujgs/SWAP1516/blob/master/Practica4/img/siege_respTim_des.png">
+    <img src="https://github.com/naujgs/SWAP1516/blob/master/Practicas/Practica4/img/siege_respTim_des.png">
     <p>Desviación</p>
   </div>
 ***
 <div align="center">    
-  <img src="https://github.com/naujgs/SWAP1516/blob/master/Practica4/img/siege_respTim_med.png">
+  <img src="https://github.com/naujgs/SWAP1516/blob/master/Practicas/Practica4/img/siege_respTim_med.png">
   <p>Media</p>    
-  <img src="https://github.com/naujgs/SWAP1516/blob/master/Practica4/img/siege_respTim_des.png">
+  <img src="https://github.com/naujgs/SWAP1516/blob/master/Practicas/Practica4/img/siege_respTim_des.png">
   <p>Desviación</p>
 </div>
 ***
 <div align="center">    
-  <img src="https://github.com/naujgs/SWAP1516/blob/master/Practica4/img/siege_transRat_med.png">
+  <img src="https://github.com/naujgs/SWAP1516/blob/master/Practicas/Practica4/img/siege_transRat_med.png">
   <p>Media</p>    
-  <img src="https://github.com/naujgs/SWAP1516/blob/master/Practica4/img/siege_transRat_des.png">
+  <img src="https://github.com/naujgs/SWAP1516/blob/master/Practicas/Practica4/img/siege_transRat_des.png">
   <p>Desviación</p>
 </div>
 ***
 <div align="center">    
-  <img src="https://github.com/naujgs/SWAP1516/blob/master/Practica4/img/siege_LongTrans_med.png">
+  <img src="https://github.com/naujgs/SWAP1516/blob/master/Practicas/Practica4/img/siege_LongTrans_med.png">
   <p>Media</p>    
-  <img src="https://github.com/naujgs/SWAP1516/blob/master/Practica4/img/siege_LongTrans_des.png">
+  <img src="https://github.com/naujgs/SWAP1516/blob/master/Practicas/Practica4/img/siege_LongTrans_des.png">
   <p>Desviación</p>
 </div>

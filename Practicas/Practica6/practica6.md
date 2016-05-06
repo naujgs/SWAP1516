@@ -45,3 +45,14 @@ Ahora buscamos la información de los dos con el comando ```sudo fdisk -l```
     <img  src="https://github.com/naujgs/SWAP1516/blob/master/Practicas/Practica6/img/hardDisk_info.png">
     <p>Informacion de los discos duros que detecta el sistema</p>
 </div>
+
+Como vemos, detecta 3 discos. El primero es en el que esta instalado el sistema, por eso nos muestra su tabla de particiones. Y los otros 2 son los que hemos creado, y por eso todavia no tienen tabla de particiones. Estan vacios.
+
+Ahora ya podemos crear el *RAID 1*. Para ello *"crearemos"* un dispositivo nuevo, ```/dev/md0```, que *"contendra"* los dos discos que hemos creado, ```/dev/sdb``` y ```/deb/sdc```
+
+<div align="center">
+    <img  src="https://github.com/naujgs/SWAP1516/blob/master/Practicas/Practica6/img/raid1_create.png">
+    <p>Creamos el RAID1</p>
+</div>
+
+>En este punto, el dispositivo se habrá creado con el nombre /dev/md0, sin embargo, en cuanto reiniciemos la máquina, Linux lo renombrará y pasará a llamarlo /dev/md127

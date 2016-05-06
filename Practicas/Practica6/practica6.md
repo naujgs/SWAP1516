@@ -94,3 +94,12 @@ Para obtener los UUID de todos los dispositivos de almacenamiento que tenemos, d
     <img  src="https://github.com/naujgs/SWAP1516/blob/master/Practicas/Practica6/img/raid1_info_hardDisk.png">
     <p>Información sobre los dispositivos de almacenamiento</p>
 </div>
+
+En la imagen vemos la informacion de la unidad donde se encuentra el sistema *(../sda1)*, la unidad de *swaping* *(../sda5)* y la unidad de nuestro *RAID* *(../md0)*
+
+Anotaremos el correspondiente al dispositivo RAID que hemos creado. Ahora ya podemos añadir al final del archivo */etc/fstab* la línea para que monte automáticamente el dispositivo RAID, que será similar a:
+
+<div align="center">
+    <img  src="https://github.com/naujgs/SWAP1516/blob/master/Practicas/Practica6/img/raid1_conf_arranq.png">
+    <p>Insercion <i>RAID1</i> para montaje de este al arranque del sistema</p>
+</div>

@@ -121,14 +121,33 @@ Finalmente, una vez que esté funcionando el dispositivo RAID, podemos simular u
 ```sh
 sudo mdadm --manage --set-faulty /dev/md0 /dev/sdb
 ```
+<div align="center">
+    <img  src="https://github.com/naujgs/SWAP1516/blob/master/Practicas/Practica6/img/said1_fallo_hardDisk.png">
+    <p>Simulado fallo disco duro de un <i>RAID</i></p>
+</div>
+
+Tras ejecutar el comando, comprobamos el estado del *RAID* y podemos ver como nos indica que la unidad */dev/sdb* esta en *estado de fallo*
 
 También podemos retirar *“en caliente”* el disco que está marcado como que ha fallado:
 ```sh
 sudo mdadm --manage --remove /dev/md0 /dev/sdb
 ```
 
+<div align="center">
+    <img  src="https://github.com/naujgs/SWAP1516/blob/master/Practicas/Practica6/img/said1_borrado_hardDisk.png">
+    <p>Simulado retirada disco duro de un <i>RAID</i></p>
+</div>
+
+Tras ejecutar el comando, comprobamos el estado del *RAID* y podemos ver como la unidad */dev/sdb* no aparece
+
 Y por último, podemos añadir, también *“en caliente”*, un nuevo disco que vendría a reemplazar al disco que hemos retirado:
 ```sh
 sudo mdadm --manage --add /dev/md0 /dev/sdb
 ```
-En todo momento podemos obtener información detallada del estado del RAID y de los discos que lo componen.
+
+<div align="center">
+    <img  src="https://github.com/naujgs/SWAP1516/blob/master/Practicas/Practica6/img/said1_add_hardDisk.png">
+    <p>Simulado inserción disco duro de un <i>RAID</i></p>
+</div>
+
+Tras ejecutar el comando, comprobamos el estado del *RAID* y podemos ver como la unidad */dev/sdb* vuelve a aparecer.

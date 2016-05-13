@@ -227,5 +227,3 @@ Tambien vemos como al borrar dicho fichero en *dat* desaparece de *prueba*
     <img  src="https://github.com/naujgs/SWAP1516/blob/master/Practicas/Practica6/img/nfs_pruebaWork.png">
     <p>Configuracion *fstab*</p>
 </div>
-
-nfs_pruebaWork

@@ -151,3 +151,45 @@ sudo mdadm --manage --add /dev/md0 /dev/sdb
 </div>
 
 Tras ejecutar el comando, comprobamos el estado del *RAID* y podemos ver como la unidad */dev/sdb* vuelve a aparecer.
+
+###3º Configuración del servidor *NFS*
+
+Lo primero que haremos sera instalar el servidor *NFS* ejecutaremos el comando:
+```sh
+sudo apt-get install nfs-common nfs-kernel-server
+```
+
+Antes de arrancar el servicio NFS, es necesario indicar qué carpetas deseamos compartir y si queremos que los usuarios accedan con permisos de solo lectura o de lectura y escritura. También existe la posibilidad de establecer desde qué PCs es posible conectarse. Estas opciones se configuran en el archivo **/etc/exports**.
+Si no realizamos la configuracion, antes de iniciar el servicio, no nos dejara
+
+<div align="center">
+    <img  src="https://github.com/naujgs/SWAP1516/blob/master/Practicas/Practica6/img/nfs_error_preConfig.png">
+    <p>Error al tratar de arrancar el servicio antes de configurarlo</p>
+</div>
+
+El fichero de configuracion es ``` /etc/exports```. En cada línea del archivo de configuración del servidor NFS */etc/exports*, se puede especificar:
+
+* La carpeta que se quiere compartir
+* El modo en que se comparte (solo lectura 'ro' o lectura y escritura 'rw' )
+* Desde qué PC o PCs se permite el acceso (nombre o IP del PC o rango de IPs)
+
+<div align="center">
+    <img  src="https://github.com/naujgs/SWAP1516/blob/master/Practicas/Practica6/img/nfs_config_clean.png">
+    <p>Fichero configuracion por defecto</p>
+</div>
+
+En nuestro caso, compartiremos el directorio del *RAID1* con la maquina dos. Para ello escribiremos la siguiente linea en el fichero de configuracon.
+
+<div align="center">
+    <img  src="https://github.com/naujgs/SWAP1516/blob/master/Practicas/Practica6/img/nfs_config_add_machine2.png">
+    <p>Configuracion servicio *NFS*</p>
+</div>
+
+>Como vemos, le damos permisos de lectura y escritura
+
+Ahora si que podremos iniciar el servicio.
+
+<div align="center">
+    <img  src="https://github.com/naujgs/SWAP1516/blob/master/Practicas/Practica6/img/nfs_start.png">
+    <p>Iniciar servicio *NFS*</p>
+</div>

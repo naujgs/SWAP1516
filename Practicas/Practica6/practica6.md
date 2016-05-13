@@ -193,3 +193,14 @@ Ahora si que podremos iniciar el servicio.
     <img  src="https://github.com/naujgs/SWAP1516/blob/master/Practicas/Practica6/img/nfs_start.png">
     <p>Iniciar servicio *NFS*</p>
 </div>
+
+
+Ahora configuraremos la *maquina 2*.
+
+Como con cualquier otro sistema de archivos, incorporar un espacio compartido NFS en el jerarquía del sistema es necesario montarlo. Debido a que este sistema de archivos tiene sus peculiaridades son necesarios unos pocos ajustes en la sintaxis de *mount* y en el archivo */etc/fstab*.
+
+```sh
+mount -t nfs4 -o rw,nosuid <direccion_maquina_servidor>:<directorio_remoto_compartir> <directorio_local>
+
+<direccion_maquina_servidor>:<directorio_remoto_compartir> <directorio_local> nfs4 rw,nosuid 0 0
+```

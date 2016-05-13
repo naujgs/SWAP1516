@@ -211,10 +211,6 @@ mount -t nfs -o rw,nosuid <direccion_maquina_servidor>:<directorio_remoto_compar
     <p>Montaje de la unidad</p>
 </div>
 
-<div align="center">
-    <img  src="https://github.com/naujgs/SWAP1516/blob/master/Practicas/Practica6/img/nfs_fstab.png">
-    <p>Configuracion *fstab*</p>
-</div>
 
 >Añadimos en el fichero *fstab* la linea marcada, para que siempre que se inicie la maquina se monte la unidad.
 

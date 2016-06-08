@@ -78,7 +78,7 @@ Cuando un buscador se encuentra con una redirección 301 reacciona de esta maner
 **Buscar información sobre los bloques de IP para los distintos países o continentes. Implementar en JavaScript o PHP la detección de la zona desde donde se conecta un usuario**
 
 Para este script hára falta tener en tu servidor el archivo ``GeoIPLocation Library``
-``scritp
+```sh
   <?php
   error_reporting(E_ALL & ~E_NOTICE);
   include("geoiploc.php");
@@ -94,4 +94,4 @@ Para este script hára falta tener en tu servidor el archivo ``GeoIPLocation Lib
   Tu dirección IP es: <?php echo($ip); ?> <br>
   Tu País es : <?php echo(getCountryFromIP($ip, " NamE"));?>
    (<?php echo(getCountryFromIP($ip, "code"));?>)
-``
+```

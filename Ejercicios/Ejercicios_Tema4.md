@@ -15,7 +15,7 @@ Mientras si tenemos una granja web y sufrimos algun fallo en un equipo, el fallo
 
 **Busca información sobre precio y características de balanceadores hardware especificos. Compara las prestaciones que ofrecen unos y otros.**
 
-_LM-5400 Server Load Balancer_ – Se trata de un balanceador que proporciona un rendimiento con mejoras SSL. El LM-5400 está optimizado para entornos empresariales e infraestructuras de comercio electrónico de alta prestación. El LM-5400 cuenta tambien con las siguientes características:
+<u>LM-5400 Server Load Balancer</u> – Se trata de un balanceador que proporciona un rendimiento con mejoras SSL. El LM-5400 está optimizado para entornos empresariales e infraestructuras de comercio electrónico de alta prestación. El LM-5400 cuenta tambien con las siguientes características:
 
   * 8 X GbE and 2x10GbE (SFP+) ports
   * Servers Supported: 1,000 Physical / 1,000 Virtual Servers

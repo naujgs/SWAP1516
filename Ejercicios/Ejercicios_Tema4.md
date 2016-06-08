@@ -25,7 +25,7 @@ Mientras si tenemos una granja web y sufrimos algun fallo en un equipo, el fallo
   * L4 Concurrent Connections: 25,600,000
   * Precio:$17990
 
-  **LM-2600 Balanceador de carga de servidores** - El LoadMaster 2600 está diseñado para cargas de trabajo en crecimiento con las siguientes características:
+**LM-2600 Balanceador de carga de servidores** - El LoadMaster 2600 está diseñado para cargas de trabajo en crecimiento con las siguientes características:
 
   * 4 puertos GbE
   * 1,7 Gbps L4 balanceador rendimiento
@@ -54,5 +54,5 @@ Los métodos de balanceo que nos ofrecen los equipos comentados en el ejercicio 
 
 Para su instalación y posterior configuración he seguido los siguientes pasos:
 
-  1º  En mi maquina virtual con el sistema Debian, ejecuto el comando ``apt-get update; apt-get install zenloadbalancer``
-  2º Tras instalarlo, accederemos a su interfaz de gestion con la direccion ``http://<dir_ip_balanceador>:444``. Las credenciales por defecto son ``admin:admin``
+  1.  En mi maquina virtual con el sistema Debian, ejecuto el comando ``apt-get update; apt-get install zenloadbalancer``
+  2. Tras instalarlo, accederemos a su interfaz de gestion con la direccion ``http://<dir_ip_balanceador>:444``. Las credenciales por defecto son ``admin:admin``
